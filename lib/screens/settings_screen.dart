@@ -5,6 +5,8 @@ import '../widgets/custom_app_bar.dart';
 import '../models/user_settings.dart';
 import '../utils/app_theme.dart';
 import '../providers/theme_provider.dart';
+import '../services/auth_service.dart';
+import 'login_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -275,6 +277,35 @@ class _SettingsScreenState extends State<SettingsScreen>
     );
   }
 
+  Future<void> _logout() async {
+    final shouldLogout = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Đăng xuất'),
+        content: const Text('Bạn có chắc chắn muốn đăng xuất?'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('Hủy'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text('Đăng xuất'),
+          ),
+        ],
+      ),
+    );
+
+    if (shouldLogout == true) {
+      await AuthService.logout();
+      Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
+        (route) => false,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
@@ -415,6 +446,16 @@ class _SettingsScreenState extends State<SettingsScreen>
                 _updateSettings(_settings.copyWith(enableHighlights: value));
               },
               icon: Icons.highlight_rounded,
+            ),
+
+            // Account
+            _buildSectionHeader('Tài khoản'),
+            _buildActionSetting(
+              title: 'Đăng xuất',
+              subtitle: 'Đăng xuất khỏi tài khoản hiện tại',
+              onTap: _logout,
+              icon: Icons.logout_rounded,
+              iconColor: Colors.red,
             ),
 
             // About
