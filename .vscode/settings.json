@@ -1,0 +1,26 @@
+{
+    "dart.flutterSdkPath": null,
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewFlutterUiGuidesCustomTracking": true,
+    "dart.warnWhenEditingFilesOutsideWorkspace": true,
+    "dart.warnWhenEditingFilesInPubCache": true,
+    "dart.analysisExcludedFolders": [
+        "build"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.dart_tool": true,
+        "**/build": true
+    },
+    "search.exclude": {
+        "**/.dart_tool": true,
+        "**/build": true
+    }
+}
