@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../widgets/custom_app_bar.dart';
+import '../widgets/tts_settings_dialog.dart';
+import '../services/tts_service.dart';
 import '../models/reading_item.dart';
 import '../utils/app_theme.dart';
 import '../providers/theme_provider.dart';
@@ -24,6 +26,10 @@ class _ReadingScreenState extends State<ReadingScreen>
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
 
+  // TTS related
+  final TTSService _ttsService = TTSService();
+  bool _isPlayingTTS = false;
+
   @override
   void initState() {
     super.initState();
@@ -37,11 +43,29 @@ class _ReadingScreenState extends State<ReadingScreen>
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
     _animationController.forward();
+
+    // Initialize TTS
+    _initializeTTS();
+  }
+
+  Future<void> _initializeTTS() async {
+    await _ttsService.initialize();
+
+    // Set up callback to update UI when TTS state changes
+    _ttsService.setOnStateChanged(() {
+      print('TTS State Changed: isPlaying = ${_ttsService.isPlaying}');
+      if (mounted) {
+        setState(() {
+          _isPlayingTTS = _ttsService.isPlaying;
+        });
+      }
+    });
   }
 
   @override
   void dispose() {
     _animationController.dispose();
+    _ttsService.stop();
     super.dispose();
   }
 
@@ -402,24 +426,25 @@ class _ReadingScreenState extends State<ReadingScreen>
             },
           ),
           _buildActionButton(
-            Icons.volume_up_rounded,
-            'Đọc to',
-            () {
-              HapticFeedback.lightImpact();
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                    content: Text('Tính năng đọc to đang phát triển')),
-              );
-            },
+            _isPlayingTTS ? Icons.stop_rounded : Icons.volume_up_rounded,
+            _isPlayingTTS ? 'Dừng' : 'Đọc to',
+            _togglePlayStopTTS,
+            onLongPress: _showTTSSettingsDialog,
           ),
         ],
       ),
     );
   }
 
-  Widget _buildActionButton(IconData icon, String label, VoidCallback onTap) {
+  Widget _buildActionButton(
+    IconData icon,
+    String label,
+    VoidCallback onTap, {
+    VoidCallback? onLongPress,
+  }) {
     return GestureDetector(
       onTap: onTap,
+      onLongPress: onLongPress,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         decoration: BoxDecoration(
@@ -503,6 +528,34 @@ class _ReadingScreenState extends State<ReadingScreen>
           ),
         ),
       ),
+    );
+  }
+
+  Future<void> _togglePlayStopTTS() async {
+    HapticFeedback.lightImpact();
+
+    print('Before toggle: isPlaying = ${_ttsService.isPlaying}');
+    await _ttsService.togglePlayStop(widget.reading.content);
+    print('After toggle: isPlaying = ${_ttsService.isPlaying}');
+
+    // Force update state immediately
+    if (mounted) {
+      setState(() {
+        _isPlayingTTS = _ttsService.isPlaying;
+      });
+    }
+  }
+
+  void _showTTSSettingsDialog() {
+    HapticFeedback.lightImpact();
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (context) => const TTSSettingsDialog(),
     );
   }
 

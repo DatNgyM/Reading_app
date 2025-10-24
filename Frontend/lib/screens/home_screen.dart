@@ -113,11 +113,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           children: [
             Row(
               children: [
-                Icon(
-                  greetingIcon,
-                  color: Colors.white,
-                  size: 28,
-                ),
+                Icon(greetingIcon, color: Colors.white, size: 28),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Column(
@@ -133,8 +129,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        DateFormat('EEEE, dd MMMM yyyy', 'vi')
-                            .format(DateTime.now()),
+                        DateFormat(
+                          'EEEE, dd MMMM yyyy',
+                          'vi',
+                        ).format(DateTime.now()),
                         style: const TextStyle(
                           fontSize: 16,
                           color: Colors.white70,
@@ -186,7 +184,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   Widget _buildStatCard(
-      String title, String value, IconData icon, Color color) {
+    String title,
+    String value,
+    IconData icon,
+    Color color,
+  ) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -208,10 +210,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           ),
           Text(
             title,
-            style: const TextStyle(
-              fontSize: 12,
-              color: Colors.black54,
-            ),
+            style: const TextStyle(fontSize: 12, color: Colors.black54),
           ),
         ],
       ),
@@ -238,7 +237,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const SearchScreen()),
+                      builder: (context) => const DailyReadingScreen(),
+                    ),
                   );
                 },
                 icon: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
@@ -288,9 +288,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       HapticFeedback.lightImpact();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text(reading.isBookmarked
-                              ? 'Đã bỏ lưu'
-                              : 'Đã lưu bài đọc'),
+                          content: Text(
+                            reading.isBookmarked
+                                ? 'Đã bỏ lưu'
+                                : 'Đã lưu bài đọc',
+                          ),
                           backgroundColor: AppTheme.primaryLight,
                         ),
                       );
@@ -312,9 +314,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(
             'Gợi ý cho bạn',
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+            style: Theme.of(
+              context,
+            ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
           ),
         ),
         const SizedBox(height: 16),
@@ -325,8 +327,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             itemCount: 3,
             itemBuilder: (context, index) {
               return Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 4,
+                ),
                 child: CustomShimmer(
                   width: double.infinity,
                   height: 80,
@@ -350,9 +354,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   HapticFeedback.lightImpact();
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text(reading.isBookmarked
-                          ? 'Đã bỏ lưu'
-                          : 'Đã lưu bài đọc'),
+                      content: Text(
+                        reading.isBookmarked ? 'Đã bỏ lưu' : 'Đã lưu bài đọc',
+                      ),
                       backgroundColor: AppTheme.primaryLight,
                     ),
                   );
@@ -372,9 +376,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         children: [
           Text(
             'Thao tác nhanh',
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+            style: Theme.of(
+              context,
+            ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 16),
           Row(
@@ -388,7 +392,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const DailyReadingScreen()),
+                        builder: (context) => const DailyReadingScreen(),
+                      ),
                     );
                   },
                 ),
@@ -403,20 +408,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const LibraryScreen()),
+                        builder: (context) => const LibraryScreen(),
+                      ),
                     );
-                  },
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _buildQuickActionCard(
-                  'Thiền định',
-                  Icons.self_improvement_outlined,
-                  AppTheme.accentLight,
-                  () {
-                    // Navigate to meditation
-                    HapticFeedback.lightImpact();
                   },
                 ),
               ),
@@ -428,7 +422,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   Widget _buildQuickActionCard(
-      String title, IconData icon, Color color, VoidCallback onTap) {
+    String title,
+    IconData icon,
+    Color color,
+    VoidCallback onTap,
+  ) {
     return GestureDetector(
       onTap: () {
         HapticFeedback.lightImpact();
@@ -472,7 +470,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const NotificationScreen()),
+                  builder: (context) => const NotificationScreen(),
+                ),
               );
             },
           ),
