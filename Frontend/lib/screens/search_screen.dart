@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../widgets/custom_app_bar.dart';
-import '../widgets/custom_search_bar.dart';
-import '../widgets/reading_card.dart';
-import '../widgets/animated_widgets.dart';
-import '../data/sample_data.dart';
-import '../models/reading_item.dart';
-import '../utils/app_theme.dart';
+import '../services/bible_pdf_service.dart';
+import '../services/liturgical_calendar_service.dart';
+import '../models/daily_reading.dart';
 import 'reading_screen.dart';
+import 'daily_reading_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -16,480 +13,318 @@ class SearchScreen extends StatefulWidget {
   State<SearchScreen> createState() => _SearchScreenState();
 }
 
-class _SearchScreenState extends State<SearchScreen>
-    with TickerProviderStateMixin {
+class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController _searchController = TextEditingController();
-  List<ReadingItem> _allReadings = [];
-  List<ReadingItem> _filteredReadings = [];
-  String _selectedCategory = 'Tất cả';
-  String _selectedDifficulty = 'Tất cả';
-  bool _isLoading = true;
-  late AnimationController _animationController;
+  List<SearchResult> _searchResults = [];
+  bool _isLoading = false;
+  String _searchType = 'Tất cả';
 
-  final List<String> _categories = SampleData.getCategories();
-  final List<String> _difficulties = SampleData.getDifficulties();
-  final List<String> _suggestions = SampleData.getSearchSuggestions();
-
-  @override
-  void initState() {
-    super.initState();
-    _animationController = AnimationController(
-      duration: const Duration(milliseconds: 600),
-      vsync: this,
-    );
-    _loadData();
-  }
+  final List<String> _searchTypes = [
+    'Tất cả',
+    'Sách Kinh Thánh',
+    'Bài đọc hàng ngày'
+  ];
 
   @override
   void dispose() {
     _searchController.dispose();
-    _animationController.dispose();
     super.dispose();
   }
 
-  Future<void> _loadData() async {
-    setState(() {
-      _isLoading = true;
-    });
+  Future<void> _performSearch(String query) async {
+    if (query.trim().isEmpty) {
+      setState(() => _searchResults = []);
+      return;
+    }
 
-    await Future.delayed(const Duration(milliseconds: 500));
+    setState(() => _isLoading = true);
+
+    List<SearchResult> results = [];
+
+    // Tìm trong Kinh Thánh
+    if (_searchType == 'Tất cả' || _searchType == 'Sách Kinh Thánh') {
+      results.addAll(await _searchBibleBooks(query));
+    }
+
+    // Tìm trong lịch đọc
+    if (_searchType == 'Tất cả' || _searchType == 'Bài đọc hàng ngày') {
+      results.addAll(await _searchDailyReadings(query));
+    }
 
     setState(() {
-      _allReadings = SampleData.getAllReadings();
-      _filteredReadings = _allReadings;
+      _searchResults = results;
       _isLoading = false;
     });
-
-    _animationController.forward();
   }
 
-  void _filterReadings() {
-    setState(() {
-      _filteredReadings = _allReadings.where((reading) {
-        final matchesSearch = _searchController.text.isEmpty ||
-            reading.title
-                .toLowerCase()
-                .contains(_searchController.text.toLowerCase()) ||
-            reading.content
-                .toLowerCase()
-                .contains(_searchController.text.toLowerCase()) ||
-            reading.author
-                .toLowerCase()
-                .contains(_searchController.text.toLowerCase()) ||
-            reading.tags.any((tag) => tag
-                .toLowerCase()
-                .contains(_searchController.text.toLowerCase()));
+  Future<List<SearchResult>> _searchBibleBooks(String query) async {
+    List<SearchResult> results = [];
+    final queryLower = query.toLowerCase();
 
-        final matchesCategory = _selectedCategory == 'Tất cả' ||
-            reading.category == _selectedCategory;
+    // Tìm trong Cựu Ước
+    final oldTestament = BiblePdfService.getOldTestamentBooks();
+    for (var entry in oldTestament.entries) {
+      if (entry.key.toLowerCase().contains(queryLower) ||
+          entry.value.fullName.toLowerCase().contains(queryLower)) {
+        results.add(SearchResult(
+          title: entry.value.fullName,
+          subtitle: '${entry.key} • ${entry.value.totalChapters} chương',
+          type: 'Cựu Ước',
+          icon: Icons.book,
+          color: Colors.blue,
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ReadingScreen(
+                  bookCode: entry.key,
+                  bookInfo: entry.value,
+                  pdfFile: 'eBookKinhThanhCuuUoc.pdf',
+                ),
+              ),
+            );
+          },
+        ));
+      }
+    }
 
-        final matchesDifficulty = _selectedDifficulty == 'Tất cả' ||
-            reading.difficulty == _selectedDifficulty;
+    // Tìm trong Tân Ước
+    final newTestament = BiblePdfService.getNewTestamentBooks();
+    for (var entry in newTestament.entries) {
+      if (entry.key.toLowerCase().contains(queryLower) ||
+          entry.value.fullName.toLowerCase().contains(queryLower)) {
+        results.add(SearchResult(
+          title: entry.value.fullName,
+          subtitle: '${entry.key} • ${entry.value.totalChapters} chương',
+          type: 'Tân Ước',
+          icon: Icons.menu_book,
+          color: Colors.green,
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ReadingScreen(
+                  bookCode: entry.key,
+                  bookInfo: entry.value,
+                  pdfFile: 'eBookKinhThanhTanUoc.pdf',
+                ),
+              ),
+            );
+          },
+        ));
+      }
+    }
 
-        return matchesSearch && matchesCategory && matchesDifficulty;
-      }).toList();
-    });
+    return results;
   }
 
-  Widget _buildSearchHeader() {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        children: [
-          CustomSearchBar(
-            controller: _searchController,
-            onChanged: (value) => _filterReadings(),
-            onSubmitted: (value) => _filterReadings(),
-            hintText: 'Tìm kiếm bài đọc, tác giả...',
-            onFilterPressed: _showFilterDialog,
-            suggestions: _suggestions,
-            onSuggestionSelected: (suggestion) {
-              _searchController.text = suggestion;
-              _filterReadings();
+  Future<List<SearchResult>> _searchDailyReadings(String query) async {
+    List<SearchResult> results = [];
+    final queryLower = query.toLowerCase();
+
+    try {
+      final readings = await LiturgicalCalendarService.parseCalendarPdf();
+
+      for (var entry in readings.entries) {
+        final reading = entry.value;
+
+        // Tìm theo tên thánh hoặc bài đọc
+        if (reading.saintName.toLowerCase().contains(queryLower) ||
+            reading.readings.any((r) =>
+                r.book.toLowerCase().contains(queryLower) ||
+                r.fullReference.toLowerCase().contains(queryLower))) {
+          results.add(SearchResult(
+            title: reading.saintName,
+            subtitle: reading.date.toString().substring(0, 10),
+            type: 'Lịch đọc',
+            icon: Icons.calendar_today,
+            color: Colors.red,
+            onTap: () {
+              if (reading.readings.isNotEmpty) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DailyReadingScreen(
+                      reading: reading.readings.first,
+                    ),
+                  ),
+                );
+              }
             },
-          ),
-          const SizedBox(height: 16),
-          Row(
-            children: [
-              Expanded(
-                child: _buildFilterChip(
-                  'Danh mục',
-                  _selectedCategory,
-                  Icons.category_rounded,
-                  () => _showCategoryDialog(),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _buildFilterChip(
-                  'Độ khó',
-                  _selectedDifficulty,
-                  Icons.speed_rounded,
-                  () => _showDifficultyDialog(),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
+          ));
+        }
+      }
+    } catch (e) {
+      print('Error searching readings: $e');
+    }
+
+    return results;
   }
 
-  Widget _buildFilterChip(
-      String label, String value, IconData icon, VoidCallback onTap) {
-    return GestureDetector(
-      onTap: () {
-        HapticFeedback.lightImpact();
-        onTap();
-      },
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-        decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.surface,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: Theme.of(context).colorScheme.outline.withOpacity(0.3),
-          ),
-        ),
-        child: Row(
-          children: [
-            Icon(icon, size: 18, color: AppTheme.primaryLight),
-            const SizedBox(width: 8),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    label,
-                    style: Theme.of(context).textTheme.labelSmall,
-                  ),
-                  Text(
-                    value,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
-                  ),
-                ],
-              ),
-            ),
-            Icon(
-              Icons.arrow_drop_down_rounded,
-              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
-            ),
-          ],
-        ),
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Tìm kiếm'),
+        backgroundColor: Colors.red[700],
+        foregroundColor: Colors.white,
       ),
-    );
-  }
-
-  Widget _buildResultsHeader() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: Column(
         children: [
-          Text(
-            'Kết quả tìm kiếm',
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
+          // Search Header
+          Container(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              children: [
+                // Search Bar
+                TextField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    hintText: 'Tìm sách, thánh, bài đọc...',
+                    prefixIcon: const Icon(Icons.search),
+                    suffixIcon: _searchController.text.isNotEmpty
+                        ? IconButton(
+                            icon: const Icon(Icons.clear),
+                            onPressed: () {
+                              _searchController.clear();
+                              setState(() => _searchResults = []);
+                            },
+                          )
+                        : null,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    filled: true,
+                    fillColor: Colors.grey[100],
+                  ),
+                  onChanged: (value) => _performSearch(value),
+                  onSubmitted: (value) => _performSearch(value),
                 ),
+
+                const SizedBox(height: 12),
+
+                // Filter Chips
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: _searchTypes.map((type) {
+                      final isSelected = _searchType == type;
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: FilterChip(
+                          label: Text(type),
+                          selected: isSelected,
+                          onSelected: (selected) {
+                            setState(() => _searchType = type);
+                            _performSearch(_searchController.text);
+                          },
+                          selectedColor: Colors.red[100],
+                          checkmarkColor: Colors.red[700],
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+              ],
+            ),
           ),
-          Text(
-            '${_filteredReadings.length} bài đọc',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color:
-                      Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
-                ),
+
+          // Results
+          Expanded(
+            child: _buildResults(),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildEmptyState() {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.search_off_rounded,
-              size: 80,
-              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.3),
-            ),
-            const SizedBox(height: 24),
-            Text(
-              'Không tìm thấy bài đọc nào',
-              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                    color: Theme.of(context)
-                        .colorScheme
-                        .onSurface
-                        .withOpacity(0.6),
-                  ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Hãy thử tìm kiếm với từ khóa khác hoặc điều chỉnh bộ lọc',
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: Theme.of(context)
-                        .colorScheme
-                        .onSurface
-                        .withOpacity(0.5),
-                  ),
-            ),
-            const SizedBox(height: 24),
-            ElevatedButton.icon(
-              onPressed: () {
-                _searchController.clear();
-                _selectedCategory = 'Tất cả';
-                _selectedDifficulty = 'Tất cả';
-                _filterReadings();
-              },
-              icon: const Icon(Icons.refresh_rounded),
-              label: const Text('Làm mới'),
-            ),
-          ],
-        ),
       ),
     );
   }
 
   Widget _buildResults() {
     if (_isLoading) {
-      return ListView.builder(
-        itemCount: 5,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-            child: CustomShimmer(
-              width: double.infinity,
-              height: 100,
-              borderRadius: BorderRadius.circular(16),
+      return const Center(child: CircularProgressIndicator());
+    }
+
+    if (_searchController.text.trim().isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.search, size: 80, color: Colors.grey[400]),
+            const SizedBox(height: 16),
+            Text(
+              'Tìm kiếm sách, thánh, bài đọc',
+              style: TextStyle(fontSize: 18, color: Colors.grey[600]),
             ),
-          );
-        },
+          ],
+        ),
       );
     }
 
-    if (_filteredReadings.isEmpty) {
-      return _buildEmptyState();
+    if (_searchResults.isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.search_off, size: 80, color: Colors.grey[400]),
+            const SizedBox(height: 16),
+            Text(
+              'Không tìm thấy kết quả',
+              style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+            ),
+          ],
+        ),
+      );
     }
 
-    return AnimatedListView(
-      children: _filteredReadings.map((reading) {
-        return ReadingCard(
-          reading: reading,
-          isCompact: true,
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ReadingScreen(reading: reading),
+    return ListView.builder(
+      itemCount: _searchResults.length,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      itemBuilder: (context, index) {
+        final result = _searchResults[index];
+        return Card(
+          margin: const EdgeInsets.only(bottom: 8),
+          child: ListTile(
+            leading: CircleAvatar(
+              backgroundColor: result.color.withOpacity(0.2),
+              child: Icon(result.icon, color: result.color),
+            ),
+            title: Text(
+              result.title,
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
+            subtitle: Text(result.subtitle),
+            trailing: Chip(
+              label: Text(
+                result.type,
+                style: const TextStyle(fontSize: 12),
               ),
-            );
-          },
-          onBookmark: () {
-            HapticFeedback.lightImpact();
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content:
-                    Text(reading.isBookmarked ? 'Đã bỏ lưu' : 'Đã lưu bài đọc'),
-                backgroundColor: AppTheme.primaryLight,
-              ),
-            );
-          },
+              backgroundColor: result.color.withOpacity(0.1),
+              labelStyle: TextStyle(color: result.color),
+            ),
+            onTap: () {
+              HapticFeedback.lightImpact();
+              result.onTap();
+            },
+          ),
         );
-      }).toList(),
+      },
     );
   }
+}
 
-  void _showCategoryDialog() {
-    showModalBottomSheet(
-      context: context,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (context) => Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Chọn danh mục',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const SizedBox(height: 20),
-            ..._categories.map((category) {
-              return ListTile(
-                title: Text(category),
-                leading: Radio<String>(
-                  value: category,
-                  groupValue: _selectedCategory,
-                  onChanged: (value) {
-                    setState(() {
-                      _selectedCategory = value!;
-                    });
-                    Navigator.pop(context);
-                    _filterReadings();
-                  },
-                ),
-                onTap: () {
-                  setState(() {
-                    _selectedCategory = category;
-                  });
-                  Navigator.pop(context);
-                  _filterReadings();
-                },
-              );
-            }).toList(),
-          ],
-        ),
-      ),
-    );
-  }
+class SearchResult {
+  final String title;
+  final String subtitle;
+  final String type;
+  final IconData icon;
+  final Color color;
+  final VoidCallback onTap;
 
-  void _showDifficultyDialog() {
-    showModalBottomSheet(
-      context: context,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (context) => Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Chọn độ khó',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const SizedBox(height: 20),
-            ..._difficulties.map((difficulty) {
-              return ListTile(
-                title: Text(difficulty),
-                leading: Radio<String>(
-                  value: difficulty,
-                  groupValue: _selectedDifficulty,
-                  onChanged: (value) {
-                    setState(() {
-                      _selectedDifficulty = value!;
-                    });
-                    Navigator.pop(context);
-                    _filterReadings();
-                  },
-                ),
-                onTap: () {
-                  setState(() {
-                    _selectedDifficulty = difficulty;
-                  });
-                  Navigator.pop(context);
-                  _filterReadings();
-                },
-              );
-            }).toList(),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _showFilterDialog() {
-    showModalBottomSheet(
-      context: context,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (context) => Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Bộ lọc',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const SizedBox(height: 20),
-            DropdownButtonFormField<String>(
-              value: _selectedCategory,
-              decoration: const InputDecoration(labelText: 'Danh mục'),
-              items: _categories.map((category) {
-                return DropdownMenuItem(
-                  value: category,
-                  child: Text(category),
-                );
-              }).toList(),
-              onChanged: (value) {
-                setState(() {
-                  _selectedCategory = value!;
-                });
-              },
-            ),
-            const SizedBox(height: 16),
-            DropdownButtonFormField<String>(
-              value: _selectedDifficulty,
-              decoration: const InputDecoration(labelText: 'Độ khó'),
-              items: _difficulties.map((difficulty) {
-                return DropdownMenuItem(
-                  value: difficulty,
-                  child: Text(difficulty),
-                );
-              }).toList(),
-              onChanged: (value) {
-                setState(() {
-                  _selectedDifficulty = value!;
-                });
-              },
-            ),
-            const SizedBox(height: 24),
-            Row(
-              children: [
-                Expanded(
-                  child: OutlinedButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: const Text('Hủy'),
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      _filterReadings();
-                    },
-                    child: const Text('Áp dụng'),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBar(
-        title: 'Tìm kiếm',
-        showBackButton: false,
-      ),
-      body: Column(
-        children: [
-          _buildSearchHeader(),
-          _buildResultsHeader(),
-          const SizedBox(height: 16),
-          Expanded(child: _buildResults()),
-        ],
-      ),
-    );
-  }
+  SearchResult({
+    required this.title,
+    required this.subtitle,
+    required this.type,
+    required this.icon,
+    required this.color,
+    required this.onTap,
+  });
 }
