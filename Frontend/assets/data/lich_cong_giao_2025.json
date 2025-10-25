@@ -1133,5 +1133,6012 @@
                 "pdfFile": "eBookKinhThanhTanUoc.pdf"
             }
         ]
+    },
+    "2025-03-01": {
+        "saintName": "John Cassian",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hc",
+                "chapters": "17:1-15",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "10:13-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-02": {
+        "saintName": "Catarina Drexel",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hc",
+                "chapters": "17:20-24",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "10:17-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-03": {
+        "saintName": "Casimirô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hc",
+                "chapters": "35:1-12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "10:28-31",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-04": {
+        "saintName": "An chay kéng thứ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gn",
+                "chapters": "3:1-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "51",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "2 Cr",
+                "chapters": "5:20-6:2",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "6:1-6,16-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-05": {
+        "saintName": "Lê Trọ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dt",
+                "chapters": "30:15-20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:22-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-06": {
+        "saintName": "Colette",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dt",
+                "chapters": "30:15-20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:22-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-07": {
+        "saintName": "Perpêtua và Phêlixita",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "58:1-9a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "9:14-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-08": {
+        "saintName": "Gioan Thiên Chúa",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "58:9b-14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "5:27-32",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-09": {
+        "saintName": "08 THƯỜNG NIÊN - Anê Bohême",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hc",
+                "chapters": "27:4-7",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "92:2-3,13-16",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Cr",
+                "chapters": "15:54-58",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "6:39-45",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-10": {
+        "saintName": "Damianh Savio",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Lv",
+                "chapters": "19:1-2,11-18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "25:31-46",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-11": {
+        "saintName": "Eulogius of Córdoba",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "55:10-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "6:7-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-12": {
+        "saintName": "CP Angela Salawa",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gn",
+                "chapters": "3:1-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:29-32",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-13": {
+        "saintName": "Leander Seville",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Et C",
+                "chapters": "12,14-16,23-25",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "7:7-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-14": {
+        "saintName": "Maximiliano Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ed",
+                "chapters": "18:21-28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "5:20-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-15": {
+        "saintName": "Louise Marillac",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dnl",
+                "chapters": "26:16-19",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "5:43-48",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-16": {
+        "saintName": "1 MÙA CHAY - Phanêtêa thánh Rôma",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "26:4-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "103:1-4,8-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "8:8-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "4:1-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-17": {
+        "saintName": "2 MÙA CHAY - Clement Maria Hofbauer",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "15:5-12,17-18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "23:1-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-18": {
+        "saintName": "Cyrillô Giêrusalem",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "1:10,16-20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "23:1-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-19": {
+        "saintName": "Thánh Giuse",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Sm",
+                "chapters": "7:4-5a,12-14a,16",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "89:2-5,27,29",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "4:13,16-18,22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "1:16,18-21,24a",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-20": {
+        "saintName": "Salvator Horta",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gr",
+                "chapters": "17:5-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "16:19-31",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-21": {
+        "saintName": "Cp Gioan Parma Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "37:3-4,12-13a,17b-28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "21:33-43,45-46",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-22": {
+        "saintName": "Nicholas of Flue",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Mk",
+                "chapters": "7:14-15,18-20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-23": {
+        "saintName": "2 MÙA CHAY - Oscar Romero",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "3:1-8a,13-15a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "103:1-4,6-8,11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Cr",
+                "chapters": "10:1-6,10-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "13:1-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-24": {
+        "saintName": "2 Vua 5:1-15a",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Vua",
+                "chapters": "5:1-15a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "4:24-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-25": {
+        "saintName": "Truyền Tin Cho Đức Mẹ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "7:10-14,8:10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "40:7-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Dt",
+                "chapters": "10:4-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:26-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-26": {
+        "saintName": "Braulio",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gr",
+                "chapters": "7:23-28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "5:17-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-27": {
+        "saintName": "Phanxicô Brunô Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gr",
+                "chapters": "7:23-28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:14-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-28": {
+        "saintName": "Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hs",
+                "chapters": "14:2-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "12:28-34",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-29": {
+        "saintName": "Ludovico, Cr Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hs",
+                "chapters": "6:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "18:9-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-30": {
+        "saintName": "3 MÙA CHAY - 4 MÙA CHAY Giêan Climacus",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gs",
+                "chapters": "5:9a,10-12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "34:2-7",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "2 Cr",
+                "chapters": "5:17-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "15:1-3,11-32",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-03-31": {
+        "saintName": "Stephano Mir Saba",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "65:17-21",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "4:43-54",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-01": {
+        "saintName": "Hugh Benôble, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ed",
+                "chapters": "47:1-9,12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "5:1-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-02": {
+        "saintName": "Phanxicô Paola",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "49:8-15",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "5:17-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-03": {
+        "saintName": "Bênêđictô, Africa Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "32:7-14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "5:31-47",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-04": {
+        "saintName": "Isodôrô, Gm Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "2:1a,12-22",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "7:1-2,10,25-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-05": {
+        "saintName": "Vincentê Ferrer Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gr",
+                "chapters": "11:18-20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "7:40-53",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-06": {
+        "saintName": "5 MÙA CHAY - Crescentia Hoess",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "43:16-21",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "126:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Pl",
+                "chapters": "3:8-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "8:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-07": {
+        "saintName": "Gioan Baptista Lasan Dn 13:1-9,15-17,19-30,33-62 hay 13:41c-62",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "13:1-9,15-17,19-30,33-62",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "8:1-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-08": {
+        "saintName": "Julie Billiart",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ds",
+                "chapters": "21:4-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "8:21-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-09": {
+        "saintName": "Innocent ơ Berzo",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "3:14-20,91-92,95",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "8:31-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-10": {
+        "saintName": "Mađalêna Canôsa",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "17:3-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "8:51-59",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-11": {
+        "saintName": "Stanislas, Gm Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gr",
+                "chapters": "20:10-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "10:31-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-12": {
+        "saintName": "Têrêsa Los",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ed",
+                "chapters": "37:21-28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "11:45-56",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-13": {
+        "saintName": "LỄ LÁ - Martínô I, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Lc",
+                "chapters": "19:28-40",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Pl",
+                "chapters": "2:6-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "22:14-23:56",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-14": {
+        "saintName": "Tuần Thánh Cp Phêrô Gonzalez",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "42:1-7",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "12:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-15": {
+        "saintName": "Tuần Thánh Cp Caesar de Bus",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "49:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "13:21-33,36-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-16": {
+        "saintName": "Tuần Thánh Bênêđictô Lê lãm pháp Dâu",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "50:4-9a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "26:14-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-17": {
+        "saintName": "Tuần Thánh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "12:1-8,11-14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "13:1-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-18": {
+        "saintName": "Tuần Thánh Cp James Oldo An chay Kiêng thịt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "52:13-53:12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Dt",
+                "chapters": "4:14-16,5:7-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "18:1-19:42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-19": {
+        "saintName": "Cp Luchesio và Buonadonna ** Vọng Phục Sinh xem bài đọc phía dưới",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "1:1-2:2",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "16:9-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-20": {
+        "saintName": "PHỤC SINH - Conrad Parzham",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "10:34a,37-43",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "118:1-2,16-17,22-23",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Cl",
+                "chapters": "3:1-4",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "20:1-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-21": {
+        "saintName": "Anselm, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "2:14,22-33",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "28:8-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-22": {
+        "saintName": "Adalbært Praque",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "2:36-41",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "20:11-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-23": {
+        "saintName": "Giorgê & Adalbert",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "3:1-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "24:13-35",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-24": {
+        "saintName": "Fideliso de Sigmaringen",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "3:11-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "24:35-48",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-25": {
+        "saintName": "Th. Mác-ca",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "4:1-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "21:1-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-26": {
+        "saintName": "Pedro de Betancur",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "4:13-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "16:9-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-27": {
+        "saintName": "2 PHỤC SINH - CHÚA THƯƠNG XÓT",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "5:12-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "118:2-4,13-15,22-24",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Kh",
+                "chapters": "1:9-11a,12-13,17-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "20:19-31",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-28": {
+        "saintName": "Pherô M. Chanel",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "4:23-31",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "3:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-29": {
+        "saintName": "Catarina Siena",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "4:32-37",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "3:7b-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-04-30": {
+        "saintName": "Thứ Năm ngày 17/4 Lễ Lãm phép Dâu",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "5:17-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "3:16-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-01": {
+        "saintName": "Thánh Giuse Thợ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "15:1-6",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "90",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "St",
+                "chapters": "1:20-2:3",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "13:54-58",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-02": {
+        "saintName": "Athanasê, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "5:34-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:1-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-03": {
+        "saintName": "Philippa và Giacôba",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "5:34-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:1-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-04": {
+        "saintName": "3 PHỤC SINH - Michael Giedroyc",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "5:27-32,40b-41",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "30:2,4-6,11-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Kh",
+                "chapters": "5:11-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "21:1-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-05": {
+        "saintName": "Hilary Arles, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "6:8-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:22-29",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-06": {
+        "saintName": "Marian và James",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "7:51-8:1a",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:30-35",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-07": {
+        "saintName": "Cp Rose Venerini",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "8:1b-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:35-40",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-08": {
+        "saintName": "Lady Julian of Norwich",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "8:26-40",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:44-51",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-09": {
+        "saintName": "Catarina Bolôgna",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "9:1-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:52-59",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-10": {
+        "saintName": "Damien de Veuster",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "9:31-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:60-69",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-11": {
+        "saintName": "4 PHỤC SINH - Ignasio Lacôni",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "13:14,43-52",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "100:1-3,5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Kh",
+                "chapters": "7:9,14b-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "10:27-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-12": {
+        "saintName": "Nerêô và Achilêô, Pancraxiô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "11:1-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "10:1-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-13": {
+        "saintName": "Đức Mẹ Fatima",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "11:19-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "10:22-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-14": {
+        "saintName": "Matthia, Tông đồ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "1:15-17,20-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "113:1-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "15:9-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-15": {
+        "saintName": "Isidorô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "13:13-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "13:16-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-16": {
+        "saintName": "Margaret Cortona",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "13:26-33",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "14:1-6",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-17": {
+        "saintName": "Paschal Baylon",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "13:44-52",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "14:7-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-18": {
+        "saintName": "5 PHỤC SINH - Gioan I, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "14:21-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "145:8-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Kh",
+                "chapters": "21:1-5a",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "13:31-33a,34-35",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-19": {
+        "saintName": "Alcuin",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "14:5-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "14:21-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-20": {
+        "saintName": "Bênađinô thanh Siêna",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "14:19-28",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "14:27-31a",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-21": {
+        "saintName": "Christophê de Magallanes",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "15:1-6",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "15:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-22": {
+        "saintName": "Rita Cascia",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "15:7-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "15:9-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-23": {
+        "saintName": "John Baptist de Rossi",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "15:22-31",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "15:12-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-24": {
+        "saintName": "Vincent of Lérins",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "16:1-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "15:18-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-25": {
+        "saintName": "6 PHỤC SINH - Grêgôriô VII, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "15:1-2,22-29",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "67:2-3,5-6,8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Kh",
+                "chapters": "21:10-14,22-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "14:23-29",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-26": {
+        "saintName": "Philippê Neri",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "16:11-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "15:26-16:4a",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-27": {
+        "saintName": "Augustinô of Canterbury",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "16:22-34",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "16:5-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-28": {
+        "saintName": "Bernard of Montjoux",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "17:15,22-18:1",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "16:12-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-29": {
+        "saintName": "Phêđinandô III",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "18:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "16:16-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-30": {
+        "saintName": "Phêcđinandô III",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "18:9-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "16:20-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-05-31": {
+        "saintName": "Đức Mẹ đi viếng",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xp",
+                "chapters": "3:14-18a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Is",
+                "chapters": "12:2-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "12:9-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:39-56",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-01": {
+        "saintName": "CHÚA LÊN TRỜI - Giustinô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "1:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "47:2-3,6-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Dt",
+                "chapters": "9:24-28,10:19-23",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "24:46-53",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-02": {
+        "saintName": "Marcellinô và Prêtô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "19:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "16:29-33",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-03": {
+        "saintName": "Charles Lwanga và các bạn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "20:17-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "17:1-11a",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-04": {
+        "saintName": "Francis Caracciolo",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "20:28-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "17:11b-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-05": {
+        "saintName": "Bônifaciô, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "22:30,23:6-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "17:20-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-06": {
+        "saintName": "Nôbertô, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "25:13b-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "21:15-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-07": {
+        "saintName": "Giuse Pêrêz, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "28:16-20,30-31",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "21:20-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-08": {
+        "saintName": "T. HIẾN XUỐNG - William York, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "2:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "104:1,24,29-31,34",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Cr",
+                "chapters": "12:3b-7,12-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "20:19-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-09": {
+        "saintName": "Mc Giáo Hồn, TD Ephrem, Pt",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "3:9-15,20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "3:20-35",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-10": {
+        "saintName": "Getulius",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "1:18-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "5:13-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-11": {
+        "saintName": "Th Barnaba và các Bạn tử đạo",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "11:21b-26,13:1-3",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "98:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "10:7-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-12": {
+        "saintName": "John of Sahagun",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "3:15-4:1,3-6",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "5:20-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-13": {
+        "saintName": "Antôn Padua",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "4:7-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "5:27-32",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-14": {
+        "saintName": "Methodius I",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "5:14-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "5:33-37",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-15": {
+        "saintName": "CHÚA BA NGÔI - Germaine Cousin",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cn",
+                "chapters": "8:22-31",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "8:4-9,22-31",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "5:1-5",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "16:12-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-16": {
+        "saintName": "Gioan Phanxicô Regis",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "6:1-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "5:38-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-17": {
+        "saintName": "Emily de Vialar",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "8:1-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "5:43-48",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-18": {
+        "saintName": "Gregory Barbarigo",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "9:6-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "6:1-6,16-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-19": {
+        "saintName": "Rômualdô, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "11:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "6:7-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-20": {
+        "saintName": "Paulinô Nola, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "11:18,21-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "6:19-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-21": {
+        "saintName": "Louis Gonzague",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "12:1-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "6:24-34",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-22": {
+        "saintName": "MINH MẪU CHÚA - Thomas More",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "14:18-20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "110:1-4",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Cr",
+                "chapters": "11:23-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:11b-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-23": {
+        "saintName": "Joseph Cafasso",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "12:1-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "7:1-5",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-24": {
+        "saintName": "SN Gioan Tẩy Giả Vọng bài đọc phía dưới",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "49:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "139:1-3,13-15",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Cv",
+                "chapters": "13:22-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:57-66,80",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-25": {
+        "saintName": "William of Vercelli",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "15:1-12,17-18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "7:15-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-26": {
+        "saintName": "Anthelm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "16:1-12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "7:21-29",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-27": {
+        "saintName": "Thánh Tâm Chúa Giêsu - Cyrillô Alexandria",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ed",
+                "chapters": "34:11-16",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "23:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "5:5b-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "15:3-7",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-28": {
+        "saintName": "Irai Tím Vô Nhễm Nhứt ĐM Lê vọng phía dưới",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "18:1-15",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "8:5-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-29": {
+        "saintName": "THÁNH GIA THẤT - THÁNH PHÊRÔ VÀ PHAOLÔ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "12:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "34:2-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "2 Tm",
+                "chapters": "4:6-8,17-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "16:13-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-06-30": {
+        "saintName": "CP Thánh Tử đạo Rôma",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "18:16-33",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "8:18-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-01": {
+        "saintName": "Junipero Serra, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "19:15-29",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "8:23-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-02": {
+        "saintName": "Bernardinô Realino",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "21:5,8-20a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "8:28-34",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-03": {
+        "saintName": "Thánh Tôma, TD",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ep",
+                "chapters": "2:19-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "117:1-2",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "20:24-29",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-04": {
+        "saintName": "Elisabeth Lusitania",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "22:1-19",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "9:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-05": {
+        "saintName": "Antôn Giácarb",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "27:1-5,15-29",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "9:14-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-06": {
+        "saintName": "14 THƯỜNG NIÊN - Maria Goretti, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "66:10-14c",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "66:1-7,16,20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Gl",
+                "chapters": "6:14-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:1-12,17-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-07": {
+        "saintName": "Oliver Plunkett, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "28:10-22a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "9:18-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-08": {
+        "saintName": "Elizabeth Bồ Đào Nhà",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "32:23-33",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "9:32-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-09": {
+        "saintName": "Augustinô Zhao Rong và các Bạn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "41:55-57,42:5-7a,17-24a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "10:1-7",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-10": {
+        "saintName": "Veronica Giuliani",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "44:18-21,23b-29,45:1-5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "10:7-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-11": {
+        "saintName": "Bênêđictô, Vp",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "46:1-7,28-30",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "10:16-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-12": {
+        "saintName": "John Gaulbert",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "49:29-32,50:15-26a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "10:24-33",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-13": {
+        "saintName": "15 THƯỜNG NIÊN - Henri II",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dnl",
+                "chapters": "30:10-14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "69:14,17,30-37",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Cl",
+                "chapters": "1:15-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:25-37",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-14": {
+        "saintName": "Catarina Tekakwitha",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "2:1-15a,22",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "10:34-11:1",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-15": {
+        "saintName": "Bonaventura, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "3:1-6,9-12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "11:20-24",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-16": {
+        "saintName": "Đức Mẹ Carmilô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "3:1-6,9-12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "11:25-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-17": {
+        "saintName": "Phanxicô Sôlanô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "3:13-20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "11:28-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-18": {
+        "saintName": "Frederick",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "11:10-12,14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "12:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-19": {
+        "saintName": "Arsenius the Great",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "12:37-42",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "12:14-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-20": {
+        "saintName": "16 THƯỜNG NIÊN - Margaret of Antioch",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "18:20-32",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "15:2-5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Cl",
+                "chapters": "1:24-28",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:38-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-21": {
+        "saintName": "Lorensô Brindisi",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "14:5-18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "12:38-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-22": {
+        "saintName": "Maria Madalêna",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "5:14-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "63:2-6,8-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "20:1-2,11-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-23": {
+        "saintName": "Brigitta",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "16:1-5,9-15",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "13:1-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-24": {
+        "saintName": "John Boste",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "19:1-2,9-11,16-20b",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "13:10-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-25": {
+        "saintName": "Giacôba TD",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Cr",
+                "chapters": "4:7-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "126:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "20:20-28",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-26": {
+        "saintName": "Gioakim và Anna",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "24:3-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "13:24-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-27": {
+        "saintName": "17 THƯỜNG NIÊN - Pantaleo",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "18:20-32",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:1-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-28": {
+        "saintName": "Innocent I",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "32:15-24,30-34",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "13:31-35",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-29": {
+        "saintName": "Mácta, Maria",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "33:7-11,34:5b-9,28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "13:36-43",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-30": {
+        "saintName": "Peter Chrysologus",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "34:29-35",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "13:44-46",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-07-31": {
+        "saintName": "Inhaxiô Loyola",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xh",
+                "chapters": "40:16-21,34-38",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "13:47-53",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-01": {
+        "saintName": "Anphongsô Ligôri",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hc",
+                "chapters": "35:12-14,16-18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "14:1-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-02": {
+        "saintName": "Eusebio Vercelli",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Lv",
+                "chapters": "25:1,8-17",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "14:1-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-03": {
+        "saintName": "18 THƯỜNG NIÊN - Phêrô Julian Eymard",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hc",
+                "chapters": "3:17-18,20-28,29",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "68:4-7,10-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Dt",
+                "chapters": "12:18-19,22-24a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "14:1,7-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-04": {
+        "saintName": "Gioan Vianney, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ds",
+                "chapters": "11:4b-15",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "14:13-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-05": {
+        "saintName": "Cung hiến Đền Đức Bà Ca",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ds",
+                "chapters": "12:1-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "14:22-36",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-06": {
+        "saintName": "Chúa Biến Hình",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "7:9-10,13-14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "97:1-2,5-6,9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "2 Pr",
+                "chapters": "1:16-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:28b-36",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-07": {
+        "saintName": "Xystô II, Cajetanô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ds",
+                "chapters": "20:1-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "16:13-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-08": {
+        "saintName": "Damianh, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dnl",
+                "chapters": "4:32-40",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "16:24-28",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-09": {
+        "saintName": "Têrêsa Bênêdicta Thánh Giá",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dnl",
+                "chapters": "6:4-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "17:14-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-10": {
+        "saintName": "19 THƯỜNG NIÊN - Phêrô Julian Eymard",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "18:6-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "33:1,12,18-22",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Dt",
+                "chapters": "11:1-2,8-19",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "12:32-48",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-11": {
+        "saintName": "Clara, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dnl",
+                "chapters": "10:12-22",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "17:22-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-12": {
+        "saintName": "Louis Toulouse",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dnl",
+                "chapters": "31:1-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "18:1-5,10,12-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-13": {
+        "saintName": "Pontianô, Hippolito",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dnl",
+                "chapters": "34:1-12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "18:15-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-14": {
+        "saintName": "Maximiliano Kolbe",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gs",
+                "chapters": "3:7-10a,11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "18:21-19:1",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-15": {
+        "saintName": "ĐỨC MẸ LÊN TRỜI",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kh",
+                "chapters": "11:19a,12:1-6a,10ab",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "45:10-12,16",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Cr",
+                "chapters": "15:20-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:39-56",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-16": {
+        "saintName": "Stephanô vua Hungar",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gs",
+                "chapters": "24:14-29",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "19:13-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-17": {
+        "saintName": "20 THƯỜNG NIÊN - Gioan Thánh giá",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gr",
+                "chapters": "38:4-6,8-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "40:2-4,18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Dt",
+                "chapters": "12:1-4",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "12:49-53",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-18": {
+        "saintName": "Gioan Francisca",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Tl",
+                "chapters": "2:11-19",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "19:16-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-19": {
+        "saintName": "Gioan Eudô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Tl",
+                "chapters": "6:11-24a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "19:23-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-20": {
+        "saintName": "Bênađô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Tl",
+                "chapters": "9:6-15",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "20:1-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-21": {
+        "saintName": "Piô X, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Tl",
+                "chapters": "11:29-39a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "22:1-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-22": {
+        "saintName": "Marta, Nữ Vương",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ru",
+                "chapters": "1:1,3-6,14b-16,22",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "22:34-40",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-23": {
+        "saintName": "Rôsa Lima, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ru",
+                "chapters": "2:1-3,8-11,4:13-17",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "23:1-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-24": {
+        "saintName": "21 THƯỜNG NIÊN - Baltolomêô TD",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gs",
+                "chapters": "24:1-2a,15-17,18b",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "34:2-3,16-23",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Ep",
+                "chapters": "5:21-32",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:60-69",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-25": {
+        "saintName": "Lui, vua Pháp",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tx",
+                "chapters": "1:1-5,8b-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "23:13-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-26": {
+        "saintName": "Sêphêrinô, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tx",
+                "chapters": "2:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "23:23-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-27": {
+        "saintName": "Monica, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tx",
+                "chapters": "2:9-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "23:27-32",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-28": {
+        "saintName": "Augustinô, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tx",
+                "chapters": "3:7-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "24:42-51",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-29": {
+        "saintName": "Gioan Tẩy Giả bị trảm quyết",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tx",
+                "chapters": "4:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "6:17-29",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-30": {
+        "saintName": "Phelixitê, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tx",
+                "chapters": "4:9-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "25:14-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-08-31": {
+        "saintName": "22 THƯỜNG NIÊN - Aimôn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dnl",
+                "chapters": "4:1-2,6-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "15:2-5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Gc",
+                "chapters": "1:17-18,21b-22,27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "7:1-8,14-15,21-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-01": {
+        "saintName": "+ NĂM THÁNH 2025 chú đề Những người hành hương của cuộc sống không ngừng tiến bước về phía trước, hướng về ánh sáng và sự sống vĩnh cửu.",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "1:26-31",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "8:5-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "12:1-2",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:57-62",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-01": {
+        "saintName": "+ NĂM THÁNH 2025 chủ đề 'Những người đi hành hương của Hy vọng'",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tx",
+                "chapters": "4:13-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "4:16-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-02": {
+        "saintName": "Cp Gioan Fx Burte",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tx",
+                "chapters": "5:1-6,9-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "4:31-37",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-03": {
+        "saintName": "Grêgôriô Cả, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cl",
+                "chapters": "1:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "4:38-44",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-04": {
+        "saintName": "Rose Viterbo",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cl",
+                "chapters": "1:9-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "5:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-05": {
+        "saintName": "Teresa Calcutta",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cl",
+                "chapters": "1:15-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "5:33-39",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-06": {
+        "saintName": "Cp Claudio Granzotto",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cl",
+                "chapters": "1:21-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "6:1-5",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-07": {
+        "saintName": "23 THƯỜNG NIÊN - Frederick Ozanam",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "9:13-18b",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "90:3-6,12-17",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Plm",
+                "chapters": "9-10,12-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "14:25-33",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-08": {
+        "saintName": "Sinh Nhật Đức Mẹ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Mk",
+                "chapters": "5:1-6a hay Rm",
+                "chapters": "8:28-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "13:6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "1:1-16,18-23 hay 1:18-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-09": {
+        "saintName": "Phêrô Claver, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cl",
+                "chapters": "2:6-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "6:12-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-10": {
+        "saintName": "Thomas Villanova",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cl",
+                "chapters": "3:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "6:20-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-11": {
+        "saintName": "Cyprianô, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cl",
+                "chapters": "3:12-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "6:27-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-12": {
+        "saintName": "Thánh Danh Đức Mẹ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tm",
+                "chapters": "1:1-2,12-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "6:39-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-13": {
+        "saintName": "Gioan Kim Khẩu",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tm",
+                "chapters": "1:15-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "6:43-49",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-14": {
+        "saintName": "24 THƯỜNG NIÊN - Suy tôn Thánh Giá",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ds",
+                "chapters": "21:4b-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "78:1-2,34-38",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Pl",
+                "chapters": "2:6-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "3:13-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-15": {
+        "saintName": "Đức Mẹ sầu bi",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dt",
+                "chapters": "2:1-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "31:2-6,15-17,20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "19:25-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-16": {
+        "saintName": "Th Cornêliô và Cypriauô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tm",
+                "chapters": "3:1-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "7:1-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-17": {
+        "saintName": "Roberto Bellarmino",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tm",
+                "chapters": "3:14-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "7:31-35",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-18": {
+        "saintName": "Giuse Cupertino",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tm",
+                "chapters": "4:12-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "7:36-50",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-19": {
+        "saintName": "Gioan Newman",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tm",
+                "chapters": "6:2c-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "8:1-3",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-20": {
+        "saintName": "Anê Kim Taegon, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Tm",
+                "chapters": "6:13-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "8:4-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-21": {
+        "saintName": "25 THƯỜNG NIÊN - Lawrence Ruiz và các bạn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Am",
+                "chapters": "8:4-7",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "113:1-2,4-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Tm",
+                "chapters": "2:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "16:1-13 hay 16:10-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-22": {
+        "saintName": "Lawrence Ruiz và các bạn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Er",
+                "chapters": "1:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "8:16-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-23": {
+        "saintName": "Pacifico Severino",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Er",
+                "chapters": "9:5-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:1-6",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-24": {
+        "saintName": "Elzear và Delphina",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kg",
+                "chapters": "1:1-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "8:7-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-25": {
+        "saintName": "Cosmasô và Damianô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kg",
+                "chapters": "2:1-3,12b",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:18-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-26": {
+        "saintName": "Cp Gioan và các bạn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kg",
+                "chapters": "2:1-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:43b-45",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-27": {
+        "saintName": "Vinhson Phaolô, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dcr",
+                "chapters": "2:5-9,14-15a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:43b-45",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-28": {
+        "saintName": "26 THƯỜNG NIÊN - Wenceslaus",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Am",
+                "chapters": "6:1a,4-7",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "146:7-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Tm",
+                "chapters": "6:11-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "16:19-31",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-29": {
+        "saintName": "TL Thiên Than Micae-Raphêen-Gabriê",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "7:9-10,13-14 hay Kh 12:7-12ab",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "138:1-5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "1:47-51",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-09-30": {
+        "saintName": "Giêrônimô, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dcr",
+                "chapters": "8:20-23",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:51-56",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-01": {
+        "saintName": "Têrêsa Hd Giêsu",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Neh",
+                "chapters": "2:1-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "9:57-62",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-02": {
+        "saintName": "Thiên Thần bản mệnh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Neh",
+                "chapters": "8:1-4a,5-6,7b-12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "18:1-5,10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-03": {
+        "saintName": "Theodora Guérin",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Br",
+                "chapters": "1:15-22",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:13-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-04": {
+        "saintName": "Phanxicô Assisi",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Br",
+                "chapters": "4:5-12,27-29",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:17-24",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-05": {
+        "saintName": "27 THƯỜNG NIÊN - Faustina, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kb",
+                "chapters": "1:2-3,2:2-4",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "95:1-2,6-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "2 Tm",
+                "chapters": "1:6-8,13-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "17:5-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-06": {
+        "saintName": "Brunô, Maria Rosa Durocher",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gn",
+                "chapters": "1:1-2,2:1-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:25-37",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-07": {
+        "saintName": "Đức Mẹ Mân Côi",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gn",
+                "chapters": "3:1-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:38-42",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-08": {
+        "saintName": "Gioan Leonardi, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gn",
+                "chapters": "4:1-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:1-4",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-09": {
+        "saintName": "Denis và các bạn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Mal",
+                "chapters": "3:13-20b",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:5-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-10": {
+        "saintName": "Phanxicô Borgia",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ge",
+                "chapters": "1:13-15,2:1-2",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:15-26",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-11": {
+        "saintName": "Gioan XXIII",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ge",
+                "chapters": "4:12-21",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:27-28",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-12": {
+        "saintName": "28 THƯỜNG NIÊN - Margaret Alacoque",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Vua",
+                "chapters": "5:14-17",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "98:1-4",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "2 Tm",
+                "chapters": "2:8-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "17:11-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-13": {
+        "saintName": "Margaret Alacoque",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "1:1-7",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:29-32",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-14": {
+        "saintName": "Callisto I, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "1:16-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:37-41",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-15": {
+        "saintName": "Têrêxa Avila, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "2:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:42-46",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-16": {
+        "saintName": "Hedwig, Margarita Maria Alacoque",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "3:21-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "11:47-54",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-17": {
+        "saintName": "Inhaxiô Antiokia",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "4:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "12:1-7",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-18": {
+        "saintName": "Thánh Luca",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Tm",
+                "chapters": "4:10-17b",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "145:10-13,17-18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:1-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-19": {
+        "saintName": "29 THƯỜNG NIÊN - Phaolô Thânb Giá",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "53:10-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "33:4-5,18-20,22",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Dt",
+                "chapters": "4:14-16",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mc",
+                "chapters": "10:35-45 hay 10:42-45",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-20": {
+        "saintName": "Phaolô Thành Giá",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "5:12,15b,17-19,20b-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "12:13-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-21": {
+        "saintName": "Ilariôn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "5:12,17-19,20b-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "12:35-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-22": {
+        "saintName": "Gioan Phaolô II,Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "6:12-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "12:39-48",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-23": {
+        "saintName": "Gioan Capistrano",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "6:19-23",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "12:49-53",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-24": {
+        "saintName": "Anthony Mary Claret",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "7:18-25a",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "12:54-59",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-25": {
+        "saintName": "Cp Antôniô Galvão",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "8:1-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "13:1-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-26": {
+        "saintName": "30 THƯỜNG NIÊN - Cp Conlerto Farini",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Hc",
+                "chapters": "35:12-14,16-18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "34:2-3,17-19,23",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "2 Tm",
+                "chapters": "4:6-8,16-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "18:9-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-27": {
+        "saintName": "Bartolomêô Vicenza",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "8:12-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "13:10-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-28": {
+        "saintName": "Simon và Thadêô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Eph",
+                "chapters": "2:19-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "19:2-5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "6:12-16",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-29": {
+        "saintName": "Narcissus Giêrusalem",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "8:26-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "13:22-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-30": {
+        "saintName": "Anphongsô Rodriguez",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "8:31b-39",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "13:31-35",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-10-31": {
+        "saintName": "Wolfgang Regensburg",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "9:1-5",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "14:1-6",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-01": {
+        "saintName": "LỄ CÁC THÁNH TỬ ĐẠO VN ngày 24/11",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kh",
+                "chapters": "7:2-4,9-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "24:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Ga",
+                "chapters": "3:1-3",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "5:1-12a",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-02": {
+        "saintName": "CÁC ĐẲNG LINH HỒN",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "3:1-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "23:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "5:5-11 hay 6:3-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "6:37-40",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-03": {
+        "saintName": "Martínô Porres",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "11:29-36",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "14:12-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-04": {
+        "saintName": "Charles Borômêô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "12:5-16b",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "14:15-24",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-05": {
+        "saintName": "*Solano Casey, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "13:8-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "14:25-33",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-06": {
+        "saintName": "Nicola Tavelic",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "14:7-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "15:1-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-07": {
+        "saintName": "Didacô, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "15:14-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "16:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-08": {
+        "saintName": "Cp Gioan Scôtus",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Rm",
+                "chapters": "16:3-9,16,22-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "16:9-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-09": {
+        "saintName": "CUNG HIẾN ĐỀN THÁNH LATERANÔ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ed",
+                "chapters": "47:1-2,8-9,12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "46:2-3,5-6,8-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "1 Cr",
+                "chapters": "3:9c-11,16-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "2:13-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-10": {
+        "saintName": "Lêô Cả, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "1:1-7",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "17:1-6",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-11": {
+        "saintName": "Martino Tours, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "2:23-3:9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "17:7-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-12": {
+        "saintName": "Giôsaphát, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "6:1-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "17:11-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-13": {
+        "saintName": "Phanxicô Xavier Cabrini",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "7:22b-8:1",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "17:20-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-14": {
+        "saintName": "Gertrude, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "13:1-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "17:26-37",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-15": {
+        "saintName": "Alberto Cả",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Kn",
+                "chapters": "18:14-16,19",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "18:1-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-16": {
+        "saintName": "33 THƯỜNG NIÊN - Margaret Tổ Cách Lan",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Mal",
+                "chapters": "3:19-20a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "98:5-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "2 Th",
+                "chapters": "3:7-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "21:5-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-17": {
+        "saintName": "Elizabeth Hungari",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Mc",
+                "chapters": "1:10-15,41-43,54-57,62-63",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "18:35-43",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-18": {
+        "saintName": "Cung hiến đền thờ T Phêrô và Phaolô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Mc",
+                "chapters": "6:18-31",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "19:1-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-19": {
+        "saintName": "Agnes Assisi, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Mc",
+                "chapters": "7:1,20-31",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "19:11-28",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-20": {
+        "saintName": "Rose Philippine Duchesne",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Mc",
+                "chapters": "2:15-29",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "19:41-44",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-21": {
+        "saintName": "Đức Mẹ Dâng Minh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Mc",
+                "chapters": "4:36-37,52-59",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "19:45-48",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-22": {
+        "saintName": "Cecilia, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Mc",
+                "chapters": "6:1-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "20:27-40",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-23": {
+        "saintName": "CHÚA KITÔ VUA - Clemente I, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Sm",
+                "chapters": "5:1-3",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "122:1-5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Cl",
+                "chapters": "1:12-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "23:35-43",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-24": {
+        "saintName": "Các Thánh Tử Đạo VN, Xem phía dưới",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Mc",
+                "chapters": "1:10-15,41-43,54-57,62-63",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "118:1-2,14,15,18",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Kh",
+                "chapters": "19:1-6,9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "21:1-4",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-25": {
+        "saintName": "Catherine Alexandria",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "2:31-45",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "21:5-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-26": {
+        "saintName": "Leonard",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "5:1-6,13-14,16-17,23-28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "21:12-19",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-27": {
+        "saintName": "Francesco Fasani Lễ Tạ Ơn Hoa Kỳ, đọc phia trên",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "6:12-28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "21:20-28",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-28": {
+        "saintName": "James Marche",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "7:2-14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "21:29-33",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-29": {
+        "saintName": "Gioan Montê Corvino",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Dn",
+                "chapters": "7:15-27",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "21:34-36",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-11-30": {
+        "saintName": "01 MÙA VỌNG - Th André, Tổ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "2:1-5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "122:1-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "13:11-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "24:37-44",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-01": {
+        "saintName": "Cp Gioan Vercelli",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "4:2-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "8:5-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-02": {
+        "saintName": "Cp Rafal Chylinski",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "11:1-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "10:21-24",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-03": {
+        "saintName": "Phanxicô Xaviê",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "25:6-10a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "15:29-37",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-04": {
+        "saintName": "John Damascene",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "26:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "7:21,24-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-05": {
+        "saintName": "Sabbas the Sanctified",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "29:17-24",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "9:27-31",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-06": {
+        "saintName": "Nicôla, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "30:19-21,23-26",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "9:35-10:1,5a,6-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-07": {
+        "saintName": "2 MÙA VỌNG - Ambrosiô, Gm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "11:1-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "72:1-2,7-8,12-13,17",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "15:4-9",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "3:1-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-08": {
+        "saintName": "Đức Mẹ Vô Nhiễm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "3:9-15,20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "98:1-4",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Ep",
+                "chapters": "1:3-6,11-12",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:26-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-09": {
+        "saintName": "Juan Diego",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "40:1-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "18:12-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-10": {
+        "saintName": "Cp Adolph Kolping",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "40:25-31",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "11:28-30",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-11": {
+        "saintName": "Barnasô I, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "41:13-20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "11:11-15",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-12": {
+        "saintName": "Đức Mẹ Guadalupe",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "3:9-15,20",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "98:1-4",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Kh",
+                "chapters": "11:19a,12:1-6a,10ab",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:26-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-13": {
+        "saintName": "Lucia, Tn",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "48:1-4,9-11",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "17:9a,10-13",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-14": {
+        "saintName": "3 MÙA VỌNG - Gioan Thánh Giá",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "35:1-6a,10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "146:6-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Gc",
+                "chapters": "5:7-10",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "11:2-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-15": {
+        "saintName": "Maria Francês Schervier",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Ds",
+                "chapters": "24:2-7,15-17a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "21:23-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-16": {
+        "saintName": "Honoratus Kozminski",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Xp",
+                "chapters": "3:1-2,9-13",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "21:28-32",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-17": {
+        "saintName": "Ladarô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "49:2,8-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "1:1-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-18": {
+        "saintName": "Antôn Grassi, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Gi",
+                "chapters": "23:5-8",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "1:18-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-19": {
+        "saintName": "Urbanô V, Gh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Tl",
+                "chapters": "13:2-7,24-25a",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:5-25",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-20": {
+        "saintName": "Daminh Silos",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "7:10-14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:26-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-21": {
+        "saintName": "4 MÙA VỌNG - Phêrô Canisiô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Is",
+                "chapters": "7:10-14",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "24:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "1:1-7",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "1:18-24",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-22": {
+        "saintName": "Jacopone da Todi",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Sm",
+                "chapters": "1:24-28",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:46-56",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-23": {
+        "saintName": "Gioan Kanty, Lm",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Mal",
+                "chapters": "3:1-4,23-24",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:57-66",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-24": {
+        "saintName": "Vọng Giáng Sinh",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "2 Sm",
+                "chapters": "7:1-5,8b-12,14a,16",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "89:2-5,27,29",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Rm",
+                "chapters": "16:25-27",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "1:26-38",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-25": {
+        "saintName": "GIÁNG SINH",
+        "readings": [
+            {
+                "type": "Lễ Vọng",
+                "book": "Is",
+                "chapters": "62:1-5",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Lễ Ban Đêm",
+                "book": "Is",
+                "chapters": "9:1-6",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Lễ Rạng Đông",
+                "book": "Is",
+                "chapters": "52:7-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Lễ Ban Ngày",
+                "book": "Is",
+                "chapters": "52:7-10",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng Ban Đêm",
+                "book": "Lc",
+                "chapters": "2:1-14",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng Rạng Đông",
+                "book": "Lc",
+                "chapters": "2:15-20",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng Ban Ngày",
+                "book": "Ga",
+                "chapters": "1:1-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-26": {
+        "saintName": "Thánh Stêphanô",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "Cv",
+                "chapters": "6:8-10,7:54-59",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "31:3-4,6,8,16-17",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Mt",
+                "chapters": "10:17-22",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-27": {
+        "saintName": "Thánh Gioan Tông đồ",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Ga",
+                "chapters": "1:1-4",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "97:1-6,11-12",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "20:1a,2-8",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-28": {
+        "saintName": "THÁNH GIA THẤT - Các Thánh Anh Hài",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "St",
+                "chapters": "15:1-6,21:1-3",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Thi Đáp",
+                "book": "Tv",
+                "chapters": "105:1-6,8-9",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Bài Đọc 2",
+                "book": "Dt",
+                "chapters": "11:8,11-12,17-19",
+                "pdfFile": "eBookKinhThanhCuuUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "2:22-40",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-29": {
+        "saintName": "Tôma Becket",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Ga",
+                "chapters": "2:3-11",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "2:22-35",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-30": {
+        "saintName": "Anysia",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Ga",
+                "chapters": "2:12-17",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Lc",
+                "chapters": "2:36-40",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ]
+    },
+    "2025-12-31": {
+        "saintName": "Sylvestre I",
+        "readings": [
+            {
+                "type": "Bài Đọc 1",
+                "book": "1 Ga",
+                "chapters": "2:18-21",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            },
+            {
+                "type": "Tin Mừng",
+                "book": "Ga",
+                "chapters": "1:1-18",
+                "pdfFile": "eBookKinhThanhTanUoc.pdf"
+            }
+        ],
+        "note": "*LỄ GIÁNG SINH NGÀY 25/12: *Lễ Vọng: Is 62:1-5/ Cv 13:16-17,22-25/ Mt 1:1-25, *Lễ ban ngày: Is 52:7-10/ Dt 1:1-6/ Ga 1:1-18 hay 1:1-5,9-14 *Lễ ban ngày: Is 52:7-10/ Dt 1:1-6/ Ga 1:1-18 hay 1:1-5,9-14"
     }
 }
