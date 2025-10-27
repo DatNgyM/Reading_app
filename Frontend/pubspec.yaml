@@ -26,6 +26,7 @@ dependencies:
   provider: ^6.1.1
   file_picker: ^8.0.0+1
   flutter_tts: ^3.8.5
+  table_calendar: ^3.1.2
 
 
 dev_dependencies:
@@ -40,6 +41,8 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/data/
+    - assets/data/Tan_uoc.json
+    - assets/data/Cuu_uoc.json
     - assets/data/lich_cong_giao_2025.json
     - assets/pdfs/lich-cong-giao-2025-all.pdf
     - assets/pdfs/eBookKinhThanhCuuUoc.pdf

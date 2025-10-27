@@ -145,7 +145,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => DailyReadingScreen(
-                      reading: reading.readings.first,
+                      reading: reading.readings.first, date: '',
                     ),
                   ),
                 );
