@@ -55,8 +55,8 @@ class _ReadingScreenState extends State<ReadingScreen> {
   }
 
   int _getPageForChapter(int chapter) {
-    // Giả sử mỗi chương ~ 2 trang
-    return widget.bookInfo.startPage + (chapter - 1) * 2;
+    // Sử dụng logic tính toán từ BiblePdfService để đảm bảo tính nhất quán
+    return BiblePdfService.getPageNumber(widget.bookCode, chapter.toString());
   }
 
   @override

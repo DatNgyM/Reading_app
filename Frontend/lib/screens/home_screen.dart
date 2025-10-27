@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../services/liturgical_calendar_service.dart';
+import '../services/json_liturgical_service.dart';
 import '../models/daily_reading.dart';
 import 'daily_reading_screen.dart';
 
@@ -27,8 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() => isLoading = true);
 
     // Load reading cho ngày đã chọn
-    final reading =
-        await LiturgicalCalendarService.getReadingForDate(selectedDate);
+    final reading = await JsonLiturgicalService.getReadingForDate(selectedDate);
 
     setState(() {
       todayReading = reading;
