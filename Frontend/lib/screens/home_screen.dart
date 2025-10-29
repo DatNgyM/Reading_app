@@ -6,6 +6,8 @@ import '../services/json_liturgical_service.dart';
 import '../models/daily_reading.dart';
 import '../utils/app_theme.dart';
 import 'daily_reading_screen.dart';
+import 'search_screen.dart';
+import 'favorites_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -92,6 +94,29 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
               actions: [
+                IconButton(
+                  icon: const Icon(Icons.favorite, color: Colors.white),
+                  onPressed: () {
+                    HapticFeedback.lightImpact();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => const FavoritesScreen()),
+                    );
+                  },
+                  tooltip: 'Yêu thích',
+                ),
+                IconButton(
+                  icon: const Icon(Icons.search, color: Colors.white),
+                  onPressed: () {
+                    HapticFeedback.lightImpact();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const SearchScreen()),
+                    );
+                  },
+                  tooltip: 'Tìm kiếm',
+                ),
                 IconButton(
                   icon: const Icon(Icons.today, color: Colors.white),
                   onPressed: () {

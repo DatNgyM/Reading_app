@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'dart:async';
 import '../services/tts_service.dart';
+import 'search_screen.dart';
 
 class DailyReadingScreen extends StatefulWidget {
   final String date; // Format: "2025-01-01"
@@ -594,6 +595,18 @@ class _DailyReadingScreenState extends State<DailyReadingScreen> {
               ),
           ],
         ),
+        actions: [
+          IconButton(
+            tooltip: 'Tìm kiếm Kinh Thánh / Bài đọc',
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const SearchScreen()),
+              );
+            },
+          ),
+        ],
         backgroundColor: Colors.red[700],
         foregroundColor: Colors.white,
       ),
