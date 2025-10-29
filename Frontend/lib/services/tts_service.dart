@@ -13,6 +13,8 @@ class TTSService {
   double _speechRate = 0.5;
   double _volume = 1.0;
   VoidCallback? _onStateChanged;
+  Function(String text, int startOffset, int endOffset, String word)?
+      _onProgressChanged;
 
   // Getters
   bool get isInitialized => _isInitialized;
@@ -24,6 +26,13 @@ class TTSService {
   // Set state change callback
   void setOnStateChanged(VoidCallback? callback) {
     _onStateChanged = callback;
+  }
+
+  // Set progress callback
+  void setOnProgressChanged(
+      Function(String text, int startOffset, int endOffset, String word)?
+          callback) {
+    _onProgressChanged = callback;
   }
 
   // Initialize TTS
@@ -76,6 +85,11 @@ class TTSService {
       _onStateChanged?.call();
     });
 
+    // Set progress handler để track vị trí chính xác
+    _flutterTts!.setProgressHandler((text, startOffset, endOffset, word) {
+      _onProgressChanged?.call(text, startOffset, endOffset, word);
+    });
+
     _isInitialized = true;
   }
 
@@ -118,12 +132,14 @@ class TTSService {
     }
   }
 
-  // Resume speech
+  // Resume speech from pause
   Future<void> resume() async {
     if (!_isInitialized) return;
 
     try {
-      await _flutterTts!.speak(""); // Resume from pause
+      // FlutterTts không hỗ trợ resume trực tiếp trên mọi platform
+      // Cần sử dụng phương pháp khác - tạm thời comment lại
+      // await _flutterTts!.speak("");
     } catch (e) {
       debugPrint('Error resuming: $e');
     }

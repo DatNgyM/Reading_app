@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 import '../services/json_liturgical_service.dart';
 import '../models/daily_reading.dart';
+import '../utils/app_theme.dart';
 import 'daily_reading_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,25 +14,39 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   DailyReading? todayReading;
   bool isLoading = true;
   DateTime selectedDate = DateTime.now();
   DateTime focusedDate = DateTime.now();
   CalendarFormat calendarFormat = CalendarFormat.week;
-  bool showFullCalendar = false;
+  late AnimationController _fadeController;
+  late Animation<double> _fadeAnimation;
 
   @override
   void initState() {
     super.initState();
     Intl.defaultLocale = 'vi_VN';
+    _fadeController = AnimationController(
+      duration: const Duration(milliseconds: 500),
+      vsync: this,
+    );
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _fadeController, curve: Curves.easeIn),
+    );
     _loadReading();
+  }
+
+  @override
+  void dispose() {
+    _fadeController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadReading() async {
     setState(() => isLoading = true);
+    _fadeController.forward();
 
-    // Load reading cho ngày đã chọn
     final reading = await JsonLiturgicalService.getReadingForDate(selectedDate);
 
     setState(() {
@@ -41,53 +57,87 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bài Đọc Hàng Ngày'),
-        backgroundColor: Colors.red[700],
-        foregroundColor: Colors.white,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.today),
-            onPressed: () {
-              setState(() {
-                selectedDate = DateTime.now();
-                focusedDate = DateTime.now();
-              });
-              _loadReading();
-            },
-            tooltip: 'Về hôm nay',
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          // Compact Calendar - always visible
-          _buildCompactCalendar(),
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
-          // Reading content
-          Expanded(
-            child: isLoading
-                ? const Center(child: CircularProgressIndicator())
-                : todayReading == null
-                    ? _buildNoReadingView()
-                    : _buildReadingView(),
-          ),
-        ],
+    return Scaffold(
+      backgroundColor:
+          isDark ? AppTheme.backgroundDark : AppTheme.backgroundLight,
+      body: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            SliverAppBar(
+              expandedHeight: 180.0,
+              floating: false,
+              pinned: true,
+              backgroundColor: AppTheme.primaryLight,
+              flexibleSpace: FlexibleSpaceBar(
+                centerTitle: false,
+                titlePadding: const EdgeInsets.only(left: 20, bottom: 16),
+                title: Text(
+                  'Bài Đọc Hàng Ngày',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                background: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: AppTheme.primaryGradient,
+                    ),
+                  ),
+                ),
+              ),
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.today, color: Colors.white),
+                  onPressed: () {
+                    HapticFeedback.lightImpact();
+                    setState(() {
+                      selectedDate = DateTime.now();
+                      focusedDate = DateTime.now();
+                    });
+                    _loadReading();
+                  },
+                  tooltip: 'Về hôm nay',
+                ),
+              ],
+            ),
+          ];
+        },
+        body: Column(
+          children: [
+            _buildModernCalendar(),
+            Expanded(
+              child: isLoading
+                  ? const Center(child: CircularProgressIndicator())
+                  : todayReading == null
+                      ? _buildNoReadingView()
+                      : _buildReadingView(),
+            ),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildCompactCalendar() {
+  Widget _buildModernCalendar() {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Container(
+      margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: isDark ? AppTheme.cardDark : Colors.white,
+        borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 1,
-            blurRadius: 4,
-            offset: const Offset(0, 2),
+            color: AppTheme.primaryLight.withOpacity(0.1),
+            spreadRadius: 2,
+            blurRadius: 20,
+            offset: const Offset(0, 4),
           ),
         ],
       ),
@@ -98,10 +148,9 @@ class _HomeScreenState extends State<HomeScreen> {
             lastDay: DateTime(2025, 12, 31),
             focusedDay: focusedDate,
             calendarFormat: calendarFormat,
-            selectedDayPredicate: (day) {
-              return isSameDay(selectedDate, day);
-            },
+            selectedDayPredicate: (day) => isSameDay(selectedDate, day),
             onDaySelected: (selectedDay, focusedDay) {
+              HapticFeedback.lightImpact();
               setState(() {
                 selectedDate = selectedDay;
                 this.focusedDate = focusedDay;
@@ -113,7 +162,6 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             availableCalendarFormats: const {
               CalendarFormat.month: 'Tháng',
-              CalendarFormat.twoWeeks: '2 Tuần',
               CalendarFormat.week: 'Tuần',
             },
             locale: 'vi_VN',
@@ -122,103 +170,112 @@ class _HomeScreenState extends State<HomeScreen> {
               titleCentered: true,
               formatButtonShowsNext: false,
               formatButtonDecoration: BoxDecoration(
-                border: Border.all(color: Colors.red[700]!),
-                borderRadius: BorderRadius.circular(8),
+                gradient: LinearGradient(
+                  colors: AppTheme.primaryGradient,
+                ),
+                borderRadius: BorderRadius.circular(12),
               ),
-              formatButtonTextStyle: TextStyle(
-                color: Colors.red[700],
+              formatButtonTextStyle: const TextStyle(
+                color: Colors.white,
                 fontSize: 12,
+                fontWeight: FontWeight.bold,
               ),
               formatButtonPadding: const EdgeInsets.symmetric(
-                horizontal: 10,
-                vertical: 4,
+                horizontal: 16,
+                vertical: 8,
               ),
               leftChevronIcon: Icon(
                 Icons.chevron_left,
-                color: Colors.red[700],
+                color: AppTheme.primaryLight,
               ),
               rightChevronIcon: Icon(
                 Icons.chevron_right,
-                color: Colors.red[700],
+                color: AppTheme.primaryLight,
               ),
-              titleTextStyle: const TextStyle(
+              titleTextStyle: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
+                color: isDark
+                    ? AppTheme.textPrimaryDark
+                    : AppTheme.textPrimaryLight,
               ),
             ),
             calendarStyle: CalendarStyle(
               todayDecoration: BoxDecoration(
-                color: Colors.red[300],
+                gradient: LinearGradient(
+                  colors: AppTheme.secondaryGradient,
+                ),
                 shape: BoxShape.circle,
               ),
               selectedDecoration: BoxDecoration(
-                color: Colors.red[700],
+                gradient: LinearGradient(
+                  colors: AppTheme.primaryGradient,
+                ),
                 shape: BoxShape.circle,
               ),
-              weekendTextStyle: const TextStyle(
-                color: Colors.red,
+              defaultTextStyle: TextStyle(
+                color: isDark
+                    ? AppTheme.textPrimaryDark
+                    : AppTheme.textPrimaryLight,
+              ),
+              weekendTextStyle: TextStyle(
+                color: AppTheme.primaryLight,
               ),
               outsideDaysVisible: false,
-              cellMargin: const EdgeInsets.all(4),
+              cellMargin: const EdgeInsets.all(6),
             ),
             daysOfWeekStyle: DaysOfWeekStyle(
-              weekendStyle: const TextStyle(
-                color: Colors.red,
+              weekendStyle: TextStyle(
+                color: AppTheme.primaryLight,
                 fontWeight: FontWeight.bold,
-                fontSize: 12,
+                fontSize: 13,
               ),
               weekdayStyle: TextStyle(
-                color: Colors.grey[700],
+                color: isDark
+                    ? AppTheme.textSecondaryDark
+                    : AppTheme.textSecondaryLight,
                 fontWeight: FontWeight.bold,
-                fontSize: 12,
+                fontSize: 13,
               ),
             ),
             onFormatChanged: (format) {
-              setState(() {
-                calendarFormat = format;
-              });
+              setState(() => calendarFormat = format);
             },
           ),
           // Expand/Collapse button
           InkWell(
             onTap: () {
               setState(() {
-                if (calendarFormat == CalendarFormat.week) {
-                  calendarFormat = CalendarFormat.month;
-                } else {
-                  calendarFormat = CalendarFormat.week;
-                }
+                calendarFormat = calendarFormat == CalendarFormat.week
+                    ? CalendarFormat.month
+                    : CalendarFormat.week;
               });
             },
+            borderRadius: const BorderRadius.vertical(
+              bottom: Radius.circular(24),
+            ),
             child: Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: Colors.grey[300]!,
-                    width: 1,
-                  ),
-                ),
-              ),
+              padding: const EdgeInsets.symmetric(vertical: 16),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
                     calendarFormat == CalendarFormat.week
-                        ? Icons.keyboard_arrow_down
-                        : Icons.keyboard_arrow_up,
-                    color: Colors.grey[600],
-                    size: 20,
+                        ? Icons.expand_more
+                        : Icons.expand_less,
+                    color: AppTheme.primaryLight,
+                    size: 24,
                   ),
-                  const SizedBox(width: 4),
+                  const SizedBox(width: 8),
                   Text(
                     calendarFormat == CalendarFormat.week
-                        ? 'Xem thêm'
+                        ? 'Xem tháng đầy đủ'
                         : 'Thu gọn',
                     style: TextStyle(
-                      color: Colors.grey[600],
-                      fontSize: 12,
+                      color: AppTheme.primaryLight,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ],
@@ -231,30 +288,66 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildNoReadingView() {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.book_outlined, size: 80, color: Colors.grey[400]),
-          const SizedBox(height: 16),
-          Text(
-            'Không có bài đọc cho ngày này',
-            style: TextStyle(fontSize: 18, color: Colors.grey[600]),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            _getDateString(),
-            style: TextStyle(fontSize: 14, color: Colors.grey[500]),
-            textAlign: TextAlign.center,
+          Container(
+            width: 120,
+            height: 120,
+            decoration: BoxDecoration(
+              color: AppTheme.primaryLight.withOpacity(0.1),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              Icons.book_outlined,
+              size: 60,
+              color: AppTheme.primaryLight,
+            ),
           ),
           const SizedBox(height: 24),
+          Text(
+            'Không có bài đọc cho ngày này',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color:
+                  isDark ? AppTheme.textPrimaryDark : AppTheme.textPrimaryLight,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 32),
+            child: Text(
+              _getDateString(),
+              style: TextStyle(
+                fontSize: 15,
+                color: isDark
+                    ? AppTheme.textSecondaryDark
+                    : AppTheme.textSecondaryLight,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          const SizedBox(height: 32),
           ElevatedButton.icon(
-            onPressed: _loadReading,
-            icon: const Icon(Icons.refresh),
-            label: const Text('Thử lại'),
+            onPressed: () {
+              HapticFeedback.lightImpact();
+              _loadReading();
+            },
+            icon: const Icon(Icons.refresh, size: 20),
+            label: const Text(
+              'Thử lại',
+              style: TextStyle(fontSize: 16),
+            ),
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red[700],
-              foregroundColor: Colors.white,
+              elevation: 0,
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
             ),
           ),
         ],
@@ -263,87 +356,225 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildReadingView() {
-    return RefreshIndicator(
-      onRefresh: _loadReading,
-      child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        child: Column(
-          children: [
-            // Header với thánh và ngày đã chọn
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Colors.red[700]!, Colors.red[500]!],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    return FadeTransition(
+      opacity: _fadeAnimation,
+      child: RefreshIndicator(
+        onRefresh: _loadReading,
+        child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: Column(
+            children: [
+              // Modern Header Banner
+              Container(
+                width: double.infinity,
+                margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                padding: const EdgeInsets.all(28),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: AppTheme.primaryGradient,
+                  ),
+                  borderRadius: BorderRadius.circular(24),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppTheme.primaryLight.withOpacity(0.3),
+                      blurRadius: 20,
+                      offset: const Offset(0, 10),
+                    ),
+                  ],
                 ),
-              ),
-              child: Column(
-                children: [
-                  Text(
-                    _getDateString(),
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 12),
-                  Text(
-                    todayReading!.saintName,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 6,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Text(
-                      '${todayReading!.readings.length} Bài Đọc',
-                      style: TextStyle(
-                        color: Colors.white.withOpacity(0.95),
-                        fontSize: 13,
-                        fontWeight: FontWeight.w500,
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.2),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        Icons.calendar_today,
+                        color: Colors.white,
+                        size: 32,
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 16),
+                    Text(
+                      todayReading!.saintName,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        height: 1.3,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      _getDateString(),
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.white.withOpacity(0.9),
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
               ),
-            ),
 
-            // Danh sách bài đọc dạng nút bấm
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Bài đọc trong Thánh lễ',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                  ),
-                  const SizedBox(height: 16),
-                  ...todayReading!.readings.asMap().entries.map((entry) {
-                    return _buildReadingButton(entry.value, entry.key);
-                  }).toList(),
-                ],
+              // Content Section
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '📖 Bài Đọc Trong Thánh Lễ',
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: isDark
+                            ? AppTheme.textPrimaryDark
+                            : AppTheme.textPrimaryLight,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Reading Cards
+                    ...todayReading!.readings.asMap().entries.map((entry) {
+                      return _buildNewReadingCard(entry.value, entry.key);
+                    }).toList(),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildNewReadingCard(ReadingReference reading, int index) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    IconData icon;
+    List<Color> gradientColors;
+    String displayType = reading.type;
+
+    if (reading.type.contains('Tin Mừng')) {
+      icon = Icons.auto_stories_rounded;
+      gradientColors = AppTheme.warmGradient;
+    } else if (reading.type.contains('Bài Đọc 1') ||
+        reading.type.contains('Bài 1')) {
+      icon = Icons.book_rounded;
+      gradientColors = AppTheme.coolGradient;
+      displayType = 'Bài Đọc 1';
+    } else if (reading.type.contains('Bài Đọc 2') ||
+        reading.type.contains('Bài 2')) {
+      icon = Icons.book_rounded;
+      gradientColors = [AppTheme.primaryLight, AppTheme.secondaryLight];
+      displayType = 'Bài Đọc 2';
+    } else {
+      icon = Icons.menu_book_rounded;
+      gradientColors = [AppTheme.accentLight, AppTheme.primaryLight];
+    }
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      decoration: BoxDecoration(
+        color: isDark ? AppTheme.cardDark : Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: gradientColors[0].withOpacity(0.15),
+            blurRadius: 15,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {
+            HapticFeedback.lightImpact();
+            _openReading(reading);
+          },
+          borderRadius: BorderRadius.circular(20),
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: gradientColors[0].withOpacity(0.3),
+                width: 2,
               ),
             ),
-          ],
+            child: Row(
+              children: [
+                // Icon với gradient background
+                Container(
+                  width: 64,
+                  height: 64,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: gradientColors,
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: gradientColors[0].withOpacity(0.3),
+                        blurRadius: 12,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Icon(icon, color: Colors.white, size: 32),
+                ),
+                const SizedBox(width: 20),
+
+                // Content
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        displayType.toUpperCase(),
+                        style: TextStyle(
+                          color: gradientColors[0],
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.5,
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        reading.fullReference,
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: isDark
+                              ? AppTheme.textPrimaryDark
+                              : AppTheme.textPrimaryLight,
+                          height: 1.3,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  size: 20,
+                  color: gradientColors[0],
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
@@ -363,114 +594,6 @@ class _HomeScreenState extends State<HomeScreen> {
     final weekday = weekDays[selectedDate.weekday];
 
     return '$weekday, ngày ${selectedDate.day} tháng ${selectedDate.month} năm ${selectedDate.year}';
-  }
-
-  Widget _buildReadingButton(ReadingReference reading, int index) {
-    IconData icon;
-    Color color;
-    String displayType = reading.type;
-
-    if (reading.type.contains('Tin Mừng')) {
-      icon = Icons.auto_stories;
-      color = Colors.amber[700]!;
-    } else if (reading.type.contains('Bài Đọc 1') ||
-        reading.type.contains('Bài 1')) {
-      icon = Icons.book;
-      color = Colors.blue;
-      displayType = 'Bài Đọc 1';
-    } else if (reading.type.contains('Bài Đọc 2') ||
-        reading.type.contains('Bài 2')) {
-      icon = Icons.book;
-      color = Colors.green;
-      displayType = 'Bài Đọc 2';
-    } else {
-      icon = Icons.menu_book;
-      color = Colors.grey;
-    }
-
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      child: Material(
-        elevation: 2,
-        borderRadius: BorderRadius.circular(12),
-        child: InkWell(
-          onTap: () => _openReading(reading),
-          borderRadius: BorderRadius.circular(12),
-          child: Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              gradient: LinearGradient(
-                colors: [
-                  color.withOpacity(0.1),
-                  color.withOpacity(0.05),
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              border: Border.all(
-                color: color.withOpacity(0.3),
-                width: 1,
-              ),
-            ),
-            child: Row(
-              children: [
-                // Icon
-                Container(
-                  width: 56,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    color: color.withOpacity(0.15),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Icon(icon, color: color, size: 30),
-                ),
-                const SizedBox(width: 16),
-                // Content
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        displayType,
-                        style: TextStyle(
-                          color: color,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
-                          letterSpacing: 0.5,
-                        ),
-                      ),
-                      const SizedBox(height: 6),
-                      Text(
-                        reading.fullReference,
-                        style: const TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                          height: 1.3,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                // Arrow icon
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: color.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Icon(
-                    Icons.arrow_forward_ios,
-                    color: color,
-                    size: 16,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
   }
 
   void _openReading(ReadingReference reading) {

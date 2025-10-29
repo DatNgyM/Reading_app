@@ -3,41 +3,52 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  // Light Theme Colors
-  static const Color primaryLight = Color(0xFF2E7D32);
-  static const Color secondaryLight = Color(0xFF4CAF50);
-  static const Color accentLight = Color(0xFF81C784);
-  static const Color backgroundLight = Color(0xFFFAFAFA);
+  // Light Theme Colors - Modern Purple & Blue
+  static const Color primaryLight = Color(0xFF6C5CE7);
+  static const Color secondaryLight = Color(0xFF5A67D8);
+  static const Color accentLight = Color(0xFF818CF8);
+  static const Color backgroundLight = Color(0xFFF8FAFC);
   static const Color surfaceLight = Color(0xFFFFFFFF);
   static const Color cardLight = Color(0xFFFFFFFF);
-  static const Color textPrimaryLight = Color(0xFF1A1A1A);
-  static const Color textSecondaryLight = Color(0xFF6B7280);
-  static const Color textTertiaryLight = Color(0xFF9CA3AF);
-  static const Color dividerLight = Color(0xFFE5E7EB);
-  static const Color shadowLight = Color(0x1A000000);
+  static const Color textPrimaryLight = Color(0xFF1A202C);
+  static const Color textSecondaryLight = Color(0xFF4A5568);
+  static const Color textTertiaryLight = Color(0xFF718096);
+  static const Color dividerLight = Color(0xFFE2E8F0);
+  static const Color shadowLight = Color(0x1A6C5CE7);
 
   // Dark Theme Colors
-  static const Color primaryDark = Color(0xFF4CAF50);
-  static const Color secondaryDark = Color(0xFF66BB6A);
-  static const Color accentDark = Color(0xFF81C784);
-  static const Color backgroundDark = Color(0xFF0F0F0F);
-  static const Color surfaceDark = Color(0xFF1A1A1A);
-  static const Color cardDark = Color(0xFF1F1F1F);
-  static const Color textPrimaryDark = Color(0xFFF9FAFB);
-  static const Color textSecondaryDark = Color(0xFFD1D5DB);
-  static const Color textTertiaryDark = Color(0xFF9CA3AF);
-  static const Color dividerDark = Color(0xFF374151);
-  static const Color shadowDark = Color(0x1AFFFFFF);
+  static const Color primaryDark = Color(0xFF8B7AE6);
+  static const Color secondaryDark = Color(0xFF9AA0FF);
+  static const Color accentDark = Color(0xFFA29BFE);
+  static const Color backgroundDark = Color(0xFF0F1419);
+  static const Color surfaceDark = Color(0xFF1A202C);
+  static const Color cardDark = Color(0xFF252837);
+  static const Color textPrimaryDark = Color(0xFFF7FAFC);
+  static const Color textSecondaryDark = Color(0xFFCBD5E0);
+  static const Color textTertiaryDark = Color(0xFFA0AEC0);
+  static const Color dividerDark = Color(0xFF2D3748);
+  static const Color shadowDark = Color(0x408B7AE6);
 
-  // Gradient Colors
+  // Gradient Colors - Purple to Blue
   static const List<Color> primaryGradient = [
-    Color(0xFF2E7D32),
-    Color(0xFF4CAF50),
+    Color(0xFF6C5CE7),
+    Color(0xFF667EEA),
   ];
 
   static const List<Color> secondaryGradient = [
-    Color(0xFF4CAF50),
-    Color(0xFF81C784),
+    Color(0xFF667EEA),
+    Color(0xFF818CF8),
+  ];
+
+  // Accent Gradients
+  static const List<Color> warmGradient = [
+    Color(0xFFFF6B6B),
+    Color(0xFFFFA07A),
+  ];
+
+  static const List<Color> coolGradient = [
+    Color(0xFF74B9FF),
+    Color(0xFF0984E3),
   ];
 
   static ThemeData get lightTheme {

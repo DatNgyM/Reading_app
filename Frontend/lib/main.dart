@@ -1,8 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:provider/provider.dart';
 import 'screens/home_screen.dart';
+import 'providers/theme_provider.dart';
+import 'utils/app_theme.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Set status bar style
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      systemNavigationBarColor: Colors.white,
+      systemNavigationBarIconBrightness: Brightness.dark,
+    ),
+  );
+
   runApp(const MyApp());
 }
 
@@ -11,42 +27,43 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bài Đọc Hàng Ngày',
-      debugShowCheckedModeBanner: false,
+    return ChangeNotifierProvider(
+      create: (_) => ThemeProvider(),
+      child: Consumer<ThemeProvider>(
+        builder: (context, themeProvider, child) {
+          return MaterialApp(
+            title: 'Bài Đọc Hàng Ngày',
+            debugShowCheckedModeBanner: false,
 
-      // Thêm localization delegates
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
+            // Localization
+            localizationsDelegates: const [
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
 
-      // Thêm supported locales
-      supportedLocales: const [
-        Locale('vi', 'VN'), // Tiếng Việt
-        Locale('en', 'US'), // Tiếng Anh
-      ],
+            supportedLocales: const [
+              Locale('vi', 'VN'),
+              Locale('en', 'US'),
+            ],
 
-      // Set locale mặc định
-      locale: const Locale('vi', 'VN'),
+            locale: const Locale('vi', 'VN'),
 
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.red,
-          primary: Colors.red[700]!,
-        ),
-        useMaterial3: true,
-        fontFamily: 'Roboto',
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.red[700],
-          foregroundColor: Colors.white,
-          elevation: 0,
-        ),
+            // Theme
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            themeMode: themeProvider.themeMode,
+            builder: (context, child) {
+              return MediaQuery(
+                data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+                child: child!,
+              );
+            },
+
+            home: const HomeScreen(),
+          );
+        },
       ),
-
-      home: const HomeScreen(),
     );
   }
 }
