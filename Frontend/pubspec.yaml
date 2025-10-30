@@ -27,12 +27,14 @@ dependencies:
   file_picker: ^8.0.0+1
   flutter_tts: ^3.8.5
   table_calendar: ^3.1.2
+  http: ^1.1.0
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
@@ -47,3 +49,11 @@ flutter:
     - assets/pdfs/lich-cong-giao-2025-all.pdf
     - assets/pdfs/eBookKinhThanhCuuUoc.pdf
     - assets/pdfs/eBookKinhThanhTanUoc.pdf
+
+flutter_launcher_icons:
+  android: true
+  ios: false  # Tắt iOS vì thiếu cấu trúc thư mục
+  image_path: "assets/icons/app_icon.png"
+  adaptive_icon_background: "#2E7D32"  # Màu xanh lá cho nền icon Android
+  adaptive_icon_foreground: "assets/icons/app_icon.png"
+  remove_alpha_ios: true  # Xóa alpha channel nếu có
