@@ -5,9 +5,14 @@ import 'package:provider/provider.dart';
 import 'screens/home_screen.dart';
 import 'providers/theme_provider.dart';
 import 'utils/app_theme.dart';
+import 'services/notification_service.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize notification service
+  final notificationService = NotificationService();
+  await notificationService.init();
 
   // Set status bar style
   SystemChrome.setSystemUIOverlayStyle(

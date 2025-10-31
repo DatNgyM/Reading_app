@@ -8,6 +8,7 @@ import '../utils/app_theme.dart';
 import 'daily_reading_screen.dart';
 import 'search_screen.dart';
 import 'favorites_screen.dart';
+import 'notification_settings_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -94,6 +95,20 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
               actions: [
+                IconButton(
+                  icon: const Icon(Icons.notifications_outlined,
+                      color: Colors.white),
+                  onPressed: () {
+                    HapticFeedback.lightImpact();
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const NotificationSettingsScreen(),
+                      ),
+                    );
+                  },
+                  tooltip: 'Cài đặt thông báo',
+                ),
                 IconButton(
                   icon: const Icon(Icons.favorite, color: Colors.white),
                   onPressed: () {
