@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'dart:convert';
 import 'dart:async';
 import '../services/tts_service.dart';
 import 'search_screen.dart';
+import '../models/reading_content.dart';
+import '../services/reading_service.dart';
 
 class DailyReadingScreen extends StatefulWidget {
-  final String date; // Format: "2025-01-01"
+  final String date;
 
   const DailyReadingScreen({
     Key? key,
@@ -21,9 +21,7 @@ class DailyReadingScreen extends StatefulWidget {
 class _DailyReadingScreenState extends State<DailyReadingScreen> {
   bool isLoading = true;
   String? errorMessage;
-  Map<String, dynamic>? lichCongGiao;
-  Map<String, dynamic>? cuuUoc;
-  Map<String, dynamic>? tanUoc;
+  final ReadingService _readingService = ReadingService();
   List<ReadingContent> readings = [];
 
   // TTS tracking
@@ -48,9 +46,22 @@ class _DailyReadingScreenState extends State<DailyReadingScreen> {
   @override
   void initState() {
     super.initState();
-    _loadReadings();
+    _initialize();
     _initTTS();
     _loadSavedState();
+  }
+
+  // Initialize reading service first so rawLich is available to UI
+  Future<void> _initialize() async {
+    try {
+      await _readingService.init();
+      await _loadReadings(); // _loadReadings no longer calls init()
+    } catch (e) {
+      setState(() {
+        errorMessage = 'Lỗi khi khởi tạo dữ liệu: $e';
+        isLoading = false;
+      });
+    }
   }
 
   Future<void> _initTTS() async {
@@ -141,63 +152,10 @@ class _DailyReadingScreenState extends State<DailyReadingScreen> {
     try {
       setState(() => isLoading = true);
 
-      // Load các file JSON
-      final lichCongGiaoJson = await rootBundle.loadString(
-        'assets/data/lich_cong_giao_2025.json',
-      );
-      final cuuUocJson = await rootBundle.loadString(
-        'assets/data/Cuu_uoc.json',
-      );
-      final tanUocJson = await rootBundle.loadString(
-        'assets/data/Tan_uoc.json',
-      );
-
-      lichCongGiao = json.decode(lichCongGiaoJson);
-      cuuUoc = json.decode(cuuUocJson);
-      tanUoc = json.decode(tanUocJson);
-
-      // Lấy thông tin ngày
-      final dayData = lichCongGiao![widget.date];
-      if (dayData == null) {
-        throw Exception('Không tìm thấy dữ liệu cho ngày ${widget.date}');
-      }
-
-      // Xử lý từng bài đọc
-      List<ReadingContent> tempReadings = [];
-      final readingsList = dayData['readings'] as List<dynamic>?;
-
-      if (readingsList != null) {
-        for (var reading in readingsList) {
-          final type = reading['type'] as String;
-          final book = reading['book'] as String?;
-          final chapters = reading['chapters'] as String?;
-
-          //  BỎ QUA Thánh Vịnh và Thi Đáp
-          if (type.toLowerCase().contains('thi') ||
-              type.toLowerCase().contains('đáp') ||
-              type.toLowerCase().contains('vịnh') ||
-              book?.toLowerCase().contains('tv') == true ||
-              book?.toLowerCase().contains('thánh vịnh') == true) {
-            print('⏭ Bỏ qua: $type ($book)');
-            continue;
-          }
-
-          if (book != null && chapters != null) {
-            final content = _getReadingContent(book, chapters);
-            if (content != null) {
-              tempReadings.add(ReadingContent(
-                type: type,
-                book: book,
-                chapters: chapters,
-                content: content,
-              ));
-            }
-          }
-        }
-      }
-
+      // Delegate logic to ReadingService (init already called in _initialize)
+      final loaded = await _readingService.getDailyReadingsForDate(widget.date);
       setState(() {
-        readings = tempReadings;
+        readings = loaded;
         isLoading = false;
       });
 
@@ -324,231 +282,6 @@ class _DailyReadingScreenState extends State<DailyReadingScreen> {
     super.dispose();
   }
 
-  // Helper function để parse số an toàn
-  int? _safeParseInt(String value) {
-    try {
-      // Loại bỏ các ký tự không phải số
-      final cleaned = value.trim().replaceAll(RegExp(r'[^0-9]'), '');
-      if (cleaned.isEmpty) return null;
-      return int.parse(cleaned);
-    } catch (e) {
-      print('❌ Không thể parse "$value": $e');
-      return null;
-    }
-  }
-
-  String? _getReadingContent(String book, String chaptersRange) {
-    // Mapping đầy đủ các tên sách viết tắt
-    final bookMappings = {
-      // Cựu Ước - Ngũ Thư
-      'St': 'Sáng Thế Ký',
-      'Xh': 'Xuất Hành',
-      'Lv': 'Lê-vi',
-      'Ds': 'Dân Số',
-      'Dnl': 'Đệ Nhị Luật',
-
-      // Cựu Ước - Lịch Sử
-      'Gs': 'Giô-suê',
-      'Tl': 'Thủ Lãnh',
-      'Ru': 'Rút',
-      '1Sm': 'Samuen 1',
-      '2Sm': 'Samuen 2',
-      '1 Sm': 'Samuen 1',
-      '2 Sm': 'Samuen 2',
-      '1Vua': 'Vua 1',
-      '2Vua': 'Vua 2',
-      '1 Vua': 'Vua 1',
-      '2 Vua': 'Vua 2',
-      '1Sb': 'Sử Biên 1',
-      '2Sb': 'Sử Biên 2',
-      '1 Sb': 'Sử Biên 1',
-      '2 Sb': 'Sử Biên 2',
-      'Ezr': 'Étra',
-      'Neh': 'NơKhemia',
-      'Tb': 'Tôbia',
-      'Jdt': 'GiuDiTha',
-      'Et': 'Étte',
-      '1Mcb': '1 Mác-ca-bê',
-      '2Mcb': '2 Mác-ca-bê',
-
-      // Cựu Ước - Khôn Ngoan
-      'Gb': 'Gióp',
-      'Cn': 'Châm Ngôn',
-      'Gv': 'Giảng Viên',
-      'Dc': 'Diễm Ca',
-      'Kn': 'Khôn Ngoan',
-      'Hc': 'Huấn Ca',
-
-      // Cựu Ước - Tiên Tri
-      'Is': 'I-sai-a',
-      'Gr': 'Giêrêmia',
-      'Ae': 'Aica',
-      'Ba': 'Ba-rúc',
-      'Ed': 'Êdêkien',
-      'Ez': 'Êdêkien',
-      'Dn': 'Đanien',
-      'Hs': 'Hôsê',
-      'Jl': 'Giôen',
-      'Am': 'A-mốt',
-      'Ob': 'Ôvađia',
-      'Gn': 'Giôna',
-      'Mk': 'Mikha',
-      'Na': 'Nakhum',
-      'Ha': 'Khabarúc',
-      'Xp': 'Xôphônia',
-      'Ag': 'Khácgai',
-      'Za': 'Dacaria',
-      'Ml': 'Malakhi',
-
-      // Tân Ước - Phúc Âm
-      'Mt': 'Mátthêu',
-      'Mc': 'Máccô',
-      'Lc': 'Luca',
-      'Ga': 'Gioan',
-
-      // Tân Ước - Thư
-      'Cv': 'Công Vụ Tông Đồ',
-      'Rm': 'Thư Rôma',
-      '1Cr': 'Thư Côrintô 1',
-      '2Cr': 'Thư Côrintô 2',
-      '1 Cr': 'Thư Côrintô 1',
-      '2 Cr': 'Thư Côrintô 2',
-      'Gl': 'Thư Galát',
-      'Eph': 'Thư Êphêsô',
-      'Pl': 'Thư Philípphê',
-      'Cl': 'Thư Côlôxê',
-      '1Tx': 'Thư Thêxalônica 1',
-      '2Tx': 'Thư Thêxalônica 2',
-      '1 Tx': 'Thư Thêxalônica 1',
-      '2 Tx': 'Thư Thêxalônica 2',
-      '1Tm': 'Thư Timôthê 1',
-      '2Tm': 'Thư Timôthê 2',
-      '1 Tm': 'Thư Timôthê 1',
-      '2 Tm': 'Thư Timôthê 2',
-      'Tt': 'Thư Titô',
-      'Plm': 'Thư Philêmon',
-      'Dt': 'Thư Do thái',
-      'Gc': 'Thư Giacôbê',
-      '1Pr': 'Thư Phêrô 1',
-      '2Pr': 'Thư Phêrô 2',
-      '1 Pr': 'Thư Phêrô 1',
-      '2 Pr': 'Thư Phêrô 2',
-      '1Ga': 'Thư Gioan 1',
-      '2Ga': 'Thư Gioan 2',
-      '3Ga': 'Thư Gioan 3',
-      '1 Ga': 'Thư Gioan 1',
-      '2 Ga': 'Thư Gioan 2',
-      '3 Ga': 'Thư Gioan 3',
-      'Gd': 'Thư Giuđa',
-      'Kh': 'Khải Huyền',
-    };
-
-    // Tìm tên sách chính xác
-    String cleanBook = book.trim().replaceAll(' ', '');
-    String actualBookName =
-        bookMappings[cleanBook] ?? bookMappings[book] ?? book;
-
-    // Xác định sách thuộc Cựu Ước hay Tân Ước
-    Map<String, dynamic>? bookData =
-        cuuUoc![actualBookName] ?? tanUoc![actualBookName];
-
-    if (bookData == null) {
-      bookData = cuuUoc![book] ?? tanUoc![book];
-    }
-
-    if (bookData == null) {
-      print(
-          '❌ Không tìm thấy sách: $book (clean: $cleanBook, mapped: $actualBookName)');
-      return null;
-    }
-
-    print('✅ Tìm thấy sách: $book -> $actualBookName');
-
-    StringBuffer content = StringBuffer();
-
-    // Parse chaptersRange để xử lý cả trường hợp: "4:6-8,16-18" hoặc "3:12-14,4:6-8"
-    final parts = chaptersRange.split(',');
-
-    // Nhóm các range theo chương
-    Map<String, List<String>> chapterRanges = {};
-    String? currentChapter;
-
-    for (var part in parts) {
-      part = part.trim();
-
-      if (part.contains(':')) {
-        // Có dạng "4:6-8" hoặc "4:6"
-        final chapterPart = part.split(':')[0];
-        currentChapter = chapterPart;
-
-        if (!chapterRanges.containsKey(currentChapter)) {
-          chapterRanges[currentChapter] = [];
-        }
-        chapterRanges[currentChapter]!.add(part.split(':')[1]);
-      } else if (currentChapter != null) {
-        // Không có dấu ":", nghĩa là cùng chương với phần trước
-        // Ví dụ: "4:6-8,16-18" -> "16-18" thuộc chương 4
-        chapterRanges[currentChapter]!.add(part);
-      }
-    }
-
-    // Xử lý từng chương
-    for (var entry in chapterRanges.entries) {
-      final chapter = entry.key;
-      final ranges = entry.value;
-
-      final chapterData = bookData[chapter];
-      if (chapterData == null) {
-        print('❌ Không tìm thấy chương $chapter');
-        continue;
-      }
-
-      // Xử lý từng range trong chương
-      for (var range in ranges) {
-        if (range.contains('-')) {
-          // Range: "6-8" hoặc "16-18"
-          final rangeParts = range.split('-');
-
-          final startVerse = _safeParseInt(rangeParts[0]);
-          final endVerse = _safeParseInt(rangeParts[1]);
-
-          if (startVerse == null || endVerse == null) {
-            print('❌ Lỗi range: $range');
-            continue;
-          }
-
-          // Tiêu đề cho range
-          content.writeln('\n$actualBookName $chapter:$startVerse-$endVerse\n');
-
-          // Lấy các câu trong range
-          for (int i = startVerse; i <= endVerse; i++) {
-            final verse = chapterData[i.toString()];
-            if (verse != null) {
-              content.writeln('$i. $verse\n');
-            }
-          }
-        } else {
-          // Câu đơn: "6"
-          final verse = _safeParseInt(range);
-
-          if (verse == null) {
-            print('❌ Lỗi verse: $range');
-            continue;
-          }
-
-          final verseText = chapterData[verse.toString()];
-
-          content.writeln('\n$actualBookName $chapter:$verse\n');
-          if (verseText != null) {
-            content.writeln('$verse. $verseText\n');
-          }
-        }
-      }
-    }
-
-    return content.toString();
-  }
-
   String _getDateString() {
     final dateParts = widget.date.split('-');
     final year = dateParts[0];
@@ -573,7 +306,9 @@ class _DailyReadingScreenState extends State<DailyReadingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final dayData = lichCongGiao?[widget.date];
+    final dayData = _readingService.rawLich == null
+        ? null
+        : _readingService.rawLich![widget.date];
     final saintName = dayData?['saintName'] ?? '';
 
     return Scaffold(
@@ -840,18 +575,4 @@ class _DailyReadingScreenState extends State<DailyReadingScreen> {
       ),
     );
   }
-}
-
-class ReadingContent {
-  final String type;
-  final String book;
-  final String chapters;
-  final String content;
-
-  ReadingContent({
-    required this.type,
-    required this.book,
-    required this.chapters,
-    required this.content,
-  });
 }

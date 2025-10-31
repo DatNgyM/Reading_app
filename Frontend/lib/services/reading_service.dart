@@ -1,276 +1,294 @@
-import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
-import '../models/reading_item.dart';
-import '../models/user_settings.dart';
-import '../data/sample_data.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import '../models/reading_content.dart';
 
 class ReadingService {
-  static const String _readingsKey = 'readings';
-  static const String _progressKey = 'reading_progress';
-  static const String _bookmarksKey = 'bookmarks';
+  Map<String, dynamic>? _lichCongGiao;
+  Map<String, dynamic>? _cuuUoc;
+  Map<String, dynamic>? _tanUoc;
+  bool _initialized = false;
 
-  // Lấy tất cả bài đọc
-  static Future<List<ReadingItem>> getAllReadings() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final readingsJson = prefs.getStringList(_readingsKey);
+  Future<void> init() async {
+    if (_initialized) return;
+    final lichJson =
+        await rootBundle.loadString('assets/data/lich_cong_giao_2025.json');
+    final cuuJson = await rootBundle.loadString('assets/data/Cuu_uoc.json');
+    final tanJson = await rootBundle.loadString('assets/data/Tan_uoc.json');
 
-      if (readingsJson != null && readingsJson.isNotEmpty) {
-        return readingsJson
-            .map((json) => ReadingItem.fromJson(jsonDecode(json)))
-            .toList();
+    _lichCongGiao = json.decode(lichJson) as Map<String, dynamic>?;
+    _cuuUoc = json.decode(cuuJson) as Map<String, dynamic>?;
+    _tanUoc = json.decode(tanJson) as Map<String, dynamic>?;
+    _initialized = true;
+  }
+
+  Future<List<ReadingContent>> getDailyReadingsForDate(String date,
+      {bool skipPsalmsAndResponsorial = true}) async {
+    await init();
+    final dayData = _lichCongGiao?[date];
+    if (dayData == null) return [];
+
+    final readingsList = (dayData['readings'] as List<dynamic>?) ?? [];
+    final List<ReadingContent> out = [];
+
+    for (var r in readingsList) {
+      final type = r['type'] as String? ?? '';
+      final book = r['book'] as String?;
+      final chapters = r['chapters'] as String?;
+
+      if (skipPsalmsAndResponsorial) {
+        final low = type.toLowerCase();
+        if (low.contains('thi') ||
+            low.contains('đáp') ||
+            low.contains('vịnh') ||
+            (book?.toLowerCase().contains('tv') ?? false) ||
+            (book?.toLowerCase().contains('thánh vịnh') ?? false)) {
+          continue;
+        }
       }
 
-      // Nếu chưa có dữ liệu, trả về sample data
-      return SampleData.getAllReadings();
-    } catch (e) {
-      return SampleData.getAllReadings();
+      if (book != null && chapters != null) {
+        final content = _getReadingContent(book, chapters);
+        if (content != null) {
+          out.add(ReadingContent(
+              type: type, book: book, chapters: chapters, content: content));
+        }
+      }
     }
+
+    return out;
   }
 
-  // Lấy bài đọc hôm nay
-  static Future<List<ReadingItem>> getTodayReadings() async {
-    final allReadings = await getAllReadings();
-    final today = DateTime.now();
+  Future<String?> lookupPassage(
+      String bookRaw, int chapter, int startVerse, int endVerse) async {
+    await init();
+    final bookKey = _mapBookName(bookRaw);
+    Map<String, dynamic>? bookData = _tanUoc?[bookKey] ?? _cuuUoc?[bookKey];
 
-    return allReadings.where((reading) {
-      return reading.date.year == today.year &&
-          reading.date.month == today.month &&
-          reading.date.day == today.day;
-    }).toList();
+    if (bookData == null) {
+      // try a few fallbacks
+      final alt = _normalize(bookKey);
+      bookData = _tanUoc?[alt] ?? _cuuUoc?[alt];
+    }
+
+    if (bookData == null) {
+      return 'Không tìm thấy sách "$bookRaw" trong dữ liệu.';
+    }
+
+    final chapterData = bookData['$chapter'] as Map<String, dynamic>?;
+    if (chapterData == null) {
+      return 'Không tìm thấy chương $chapter trong sách $bookKey.';
+    }
+
+    final buffer = StringBuffer();
+    for (int v = startVerse; v <= endVerse; v++) {
+      final verseText = chapterData['$v'];
+      if (verseText != null) {
+        buffer.writeln('$v. $verseText\n');
+      } else {
+        buffer.writeln('$v. [Không tìm thấy câu $v]\n');
+      }
+    }
+    return buffer.toString();
   }
 
-  // Lấy bài đọc được đề xuất
-  static Future<List<ReadingItem>> getRecommendedReadings() async {
-    final allReadings = await getAllReadings();
-    return allReadings.where((reading) => reading.rating >= 4.5).toList();
+  // -------------------------
+  // Internal parsing + mapping
+  // -------------------------
+
+  String? _getReadingContent(String book, String chaptersRange) {
+    final bookKey = _mapBookName(book);
+
+    Map<String, dynamic>? bookData = _cuuUoc?[bookKey] ?? _tanUoc?[bookKey];
+
+    if (bookData == null) {
+      final alt = _normalize(bookKey);
+      bookData = _cuuUoc?[alt] ?? _tanUoc?[alt];
+    }
+    if (bookData == null) return null;
+
+    final parts = chaptersRange.split(',');
+    Map<String, List<String>> chapterRanges = {};
+    String? currentChapter;
+
+    for (var part in parts) {
+      part = part.trim();
+      if (part.contains(':')) {
+        final chapterPart = part.split(':')[0];
+        currentChapter = chapterPart;
+        chapterRanges
+            .putIfAbsent(currentChapter, () => [])
+            .add(part.split(':')[1]);
+      } else if (currentChapter != null) {
+        chapterRanges[currentChapter]!.add(part);
+      }
+    }
+
+    final sb = StringBuffer();
+    for (var entry in chapterRanges.entries) {
+      final chapter = entry.key;
+      final ranges = entry.value;
+      final chapterData = bookData[chapter];
+      if (chapterData == null) continue;
+      for (var range in ranges) {
+        if (range.contains('-')) {
+          final rp = range.split('-');
+          final s = _safeParseInt(rp[0]);
+          final e = _safeParseInt(rp[1]);
+          if (s == null || e == null) continue;
+          sb.writeln('\n$bookKey $chapter:$s-$e\n');
+          for (int i = s; i <= e; i++) {
+            final verse = chapterData[i.toString()];
+            if (verse != null) sb.writeln('$i. $verse\n');
+          }
+        } else {
+          final v = _safeParseInt(range);
+          if (v == null) continue;
+          final verseText = chapterData[v.toString()];
+          sb.writeln('\n$bookKey $chapter:$v\n');
+          if (verseText != null) sb.writeln('$v. $verseText\n');
+        }
+      }
+    }
+    return sb.toString();
   }
 
-  // Tìm kiếm bài đọc
-  static Future<List<ReadingItem>> searchReadings(String query) async {
-    final allReadings = await getAllReadings();
-    if (query.isEmpty) return allReadings;
-
-    return allReadings.where((reading) {
-      return reading.title.toLowerCase().contains(query.toLowerCase()) ||
-          reading.content.toLowerCase().contains(query.toLowerCase()) ||
-          reading.author.toLowerCase().contains(query.toLowerCase()) ||
-          reading.tags
-              .any((tag) => tag.toLowerCase().contains(query.toLowerCase()));
-    }).toList();
-  }
-
-  // Lọc theo danh mục
-  static Future<List<ReadingItem>> filterByCategory(String category) async {
-    final allReadings = await getAllReadings();
-    if (category == 'Tất cả') return allReadings;
-
-    return allReadings
-        .where((reading) => reading.category == category)
-        .toList();
-  }
-
-  // Lọc theo độ khó
-  static Future<List<ReadingItem>> filterByDifficulty(String difficulty) async {
-    final allReadings = await getAllReadings();
-    if (difficulty == 'Tất cả') return allReadings;
-
-    return allReadings
-        .where((reading) => reading.difficulty == difficulty)
-        .toList();
-  }
-
-  // Lấy bài đọc theo ID
-  static Future<ReadingItem?> getReadingById(String id) async {
-    final allReadings = await getAllReadings();
+  int? _safeParseInt(String value) {
     try {
-      return allReadings.firstWhere((reading) => reading.id == id);
-    } catch (e) {
+      final cleaned = value.trim().replaceAll(RegExp(r'[^0-9]'), '');
+      if (cleaned.isEmpty) return null;
+      return int.parse(cleaned);
+    } catch (_) {
       return null;
     }
   }
 
-  // Cập nhật tiến độ đọc
-  static Future<void> updateReadingProgress(
-      String readingId, double progress) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final progressMap = prefs.getString(_progressKey);
-      Map<String, dynamic> progressData = {};
+  String _normalize(String s) {
+    return s.toLowerCase().replaceAll(RegExp(r'[\s\.\-_,]'), '');
+  }
 
-      if (progressMap != null) {
-        progressData = jsonDecode(progressMap);
-      }
+  String _mapBookName(String raw) {
+    final k = _normalize(raw);
 
-      progressData[readingId] = {
-        'progress': progress,
-        'lastReadAt': DateTime.now().toIso8601String(),
+    final Map<String, String> map = {
+      'st': 'Sáng Thế Ký', 'stk': 'Sáng Thế Ký', 'sáng thế ký': 'Sáng Thế Ký',
+      'sáng thế': 'Sáng Thế Ký',
+      'xh': 'Xuất Hành', 'xuất hành': 'Xuất Hành',
+      'lv': 'Lê-vi', 'lê-vi': 'Lê-vi',
+      'ds': 'Dân Số', 'dân số': 'Dân Số',
+      'dnl': 'Đệ Nhị Luật', 'đệ nhị luật': 'Đệ Nhị Luật',
+
+      // Sách lịch sử
+      'tl': 'Thủ Lãnh', 'thủ lãnh': 'Thủ Lãnh',
+      'ru': 'Rút', 'rút': 'Rút',
+      '1sm': 'Samuen 1', '2sm': 'Samuen 2', 'samuen': 'Samuen 1',
+      'samuel': 'Samuen 1',
+      '1vua': 'Vua 1', '2vua': 'Vua 2',
+      '1sb': 'Sử Biên 1', '2sb': 'Sử Biên 2',
+
+      // Một số sách khác CT
+      'ezr': 'Étra', 'neh': 'NơKhemia', 'tb': 'Tôbia',
+
+      // Thơ ca / Khôn ngoan
+      'ps': 'Thánh Vịnh', 'tv': 'Thánh Vịnh', 'thánh vịnh': 'Thánh Vịnh',
+      'cn': 'Châm Ngôn', 'châm ngôn': 'Châm Ngôn',
+      'gv': 'Giảng Viên', 'giảng viên': 'Giảng Viên',
+      'dt': 'Diễm Ca', 'diễm ca': 'Diễm Ca',
+      'kn': 'Khôn Ngoan', 'hc': 'Huấn Ca',
+
+      // Tiên tri (chọn tên gần nhất)
+      'isa': 'I-sai-a', 'i-sai-a': 'I-sai-a', 'i sai a': 'I-sai-a',
+      'jer': 'Giêrêmia', 'giêrêmia': 'Giêrêmia',
+      'ezek': 'Êdêkien', 'ênêkien': 'Êdêkien', 'đanien': 'Đanien',
+      'hosea': 'Hôsê', 'joel': 'Giôen', 'amos': 'A-mốt', 'obad': 'Ôvađia',
+      'jonah': 'Giôna', 'mic': 'Mikha', 'nah': 'Nakhum', 'hab': 'Khabarúc',
+      'zeph': 'Xôphônia', 'hag': 'Khácgai', 'zec': 'Dacaria', 'mal': 'Malakhi',
+
+      // Phúc Âm / Tân Ước (viết tắt phổ biến)
+      'mt': 'Mátthêu', 'mátthêu': 'Mátthêu', 'matthew': 'Mátthêu',
+      'mc': 'Máccô', 'máccô': 'Máccô', 'mark': 'Máccô',
+      'lc': 'Luca', 'luca': 'Luca', 'luke': 'Luca',
+      'jn': 'Gioan', 'gioan': 'Gioan', 'john': 'Gioan',
+
+      // Thư NT (viết tắt)
+      'cv': 'Công vụ Tông đồ', 'acts': 'Công vụ Tông đồ',
+      'rm': 'Thư Rôma', 'rôma': 'Thư Rôma', 'roma': 'Thư Rôma',
+      '1cr': 'Thư Côrintô', '2cr': 'Thư Côrintô',
+      'gl': 'Thư Galát', 'ep': 'Thư Êphêsô', 'eph': 'Thư Êphêsô',
+      'pl': 'Thư Philípphê', 'cl': 'Thư Côlôxê',
+      '1tx': 'Thư Thêxalônica 1', '2tx': 'Thư Thêxalônica 2',
+      '1tm': 'Thư Timôthê 1', '2tm': 'Thư Timôthê 2',
+      'tt': 'Thư Titô', 'plm': 'Thư Philêmon', 'dt_nt': 'Thư Do thái',
+      'gc': 'Thư Giacôbê', '1pr': 'Thư Phêrô 1', '2pr': 'Thư Phêrô 2',
+      '1ga': 'Thư Gioan 1', '2ga': 'Thư Gioan 2', '3ga': 'Thư Gioan 3',
+      'gd': 'Thư Giuđa', 'kh': 'Khải Huyền',
+    };
+
+    if (map.containsKey(k)) return map[k]!;
+    // fallback: trả về tên gốc đã trim nếu không tìm thấy mapping
+    return raw.trim();
+  }
+
+  // Public: trả về nội dung cả chương (title/content) hoặc message khi không tìm thấy
+  Future<Map<String, String>> getChapterContent(
+      String bookRaw, int chapter) async {
+    await init();
+    final bookKey = _mapBookName(bookRaw);
+    Map<String, dynamic>? bookData = _cuuUoc?[bookKey] ?? _tanUoc?[bookKey];
+    if (bookData == null) {
+      final alt = _normalize(bookKey);
+      bookData = _cuuUoc?[alt] ?? _tanUoc?[alt];
+    }
+
+    final title = '$bookKey $chapter';
+    if (bookData == null) {
+      return {
+        'title': title,
+        'content': 'Không tìm thấy sách "$bookRaw" trong dữ liệu.'
       };
-
-      await prefs.setString(_progressKey, jsonEncode(progressData));
-    } catch (e) {
-      // Handle error
     }
+
+    final chapterData = bookData['$chapter'] as Map<String, dynamic>?;
+    if (chapterData == null) {
+      return {
+        'title': title,
+        'content': 'Không tìm thấy chương $chapter trong sách $bookKey.'
+      };
+    }
+
+    final verseKeys = chapterData.keys.toList()
+      ..sort(
+          (a, b) => int.parse(a.toString()).compareTo(int.parse(b.toString())));
+    final buffer = StringBuffer();
+    buffer.writeln('$bookKey $chapter\n');
+    for (var vk in verseKeys) {
+      final vt = chapterData[vk];
+      buffer.writeln('$vk. ${vt ?? "[Không có nội dung]"}\n');
+    }
+    return {'title': title, 'content': buffer.toString()};
   }
 
-  // Lấy tiến độ đọc
-  static Future<double> getReadingProgress(String readingId) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final progressMap = prefs.getString(_progressKey);
+  // Public: tìm sách phù hợp với query (trả về các key có trong JSON)
+  Future<List<String>> searchBookKeys(String query) async {
+    await init();
+    final q = query.trim().toLowerCase();
+    if (q.isEmpty) return [];
 
-      if (progressMap != null) {
-        final progressData = jsonDecode(progressMap);
-        return progressData[readingId]?['progress'] ?? 0.0;
-      }
-
-      return 0.0;
-    } catch (e) {
-      return 0.0;
-    }
-  }
-
-  // Đánh dấu hoàn thành
-  static Future<void> markAsCompleted(String readingId) async {
-    try {
-      final allReadings = await getAllReadings();
-      final updatedReadings = allReadings.map((reading) {
-        if (reading.id == readingId) {
-          return reading.copyWith(isCompleted: true, progress: 1.0);
+    final Set<String> found = {};
+    void checkMap(Map<String, dynamic>? m) {
+      if (m == null) return;
+      for (var key in m.keys) {
+        final keyStr = key.toString();
+        final mapped = _mapBookName(keyStr).toLowerCase();
+        if (keyStr.toLowerCase().contains(q) || mapped.contains(q)) {
+          found.add(keyStr);
         }
-        return reading;
-      }).toList();
-
-      await _saveReadings(updatedReadings);
-    } catch (e) {
-      // Handle error
-    }
-  }
-
-  // Thêm/xóa bookmark
-  static Future<void> toggleBookmark(String readingId) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final bookmarks = prefs.getStringList(_bookmarksKey) ?? [];
-
-      if (bookmarks.contains(readingId)) {
-        bookmarks.remove(readingId);
-      } else {
-        bookmarks.add(readingId);
       }
-
-      await prefs.setStringList(_bookmarksKey, bookmarks);
-
-      // Cập nhật trong danh sách bài đọc
-      final allReadings = await getAllReadings();
-      final updatedReadings = allReadings.map((reading) {
-        if (reading.id == readingId) {
-          return reading.copyWith(isBookmarked: bookmarks.contains(readingId));
-        }
-        return reading;
-      }).toList();
-
-      await _saveReadings(updatedReadings);
-    } catch (e) {
-      // Handle error
     }
+
+    checkMap(_cuuUoc);
+    checkMap(_tanUoc);
+    return found.toList();
   }
 
-  // Lưu danh sách bài đọc
-  static Future<void> _saveReadings(List<ReadingItem> readings) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final readingsJson =
-          readings.map((reading) => jsonEncode(reading.toJson())).toList();
-      await prefs.setStringList(_readingsKey, readingsJson);
-    } catch (e) {
-      // Handle error
-    }
-  }
-}
-
-class SettingsService {
-  static const String _settingsKey = 'user_settings';
-
-  // Lưu cài đặt
-  static Future<void> saveSettings(UserSettings settings) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString(_settingsKey, jsonEncode(settings.toJson()));
-    } catch (e) {
-      // Handle error
-    }
-  }
-
-  // Lấy cài đặt
-  static Future<UserSettings> getSettings() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final settingsJson = prefs.getString(_settingsKey);
-
-      if (settingsJson != null) {
-        return UserSettings.fromJson(jsonDecode(settingsJson));
-      }
-
-      return UserSettings();
-    } catch (e) {
-      return UserSettings();
-    }
-  }
-
-  // Cập nhật một cài đặt cụ thể
-  static Future<void> updateSetting(String key, dynamic value) async {
-    try {
-      final settings = await getSettings();
-      UserSettings updatedSettings;
-
-      switch (key) {
-        case 'darkMode':
-          updatedSettings = settings.copyWith(darkMode: value);
-          break;
-        case 'language':
-          updatedSettings = settings.copyWith(language: value);
-          break;
-        case 'notificationsEnabled':
-          updatedSettings = settings.copyWith(notificationsEnabled: value);
-          break;
-        case 'dailyReadingGoal':
-          updatedSettings = settings.copyWith(dailyReadingGoal: value);
-          break;
-        case 'preferredDifficulty':
-          updatedSettings = settings.copyWith(preferredDifficulty: value);
-          break;
-        case 'favoriteCategories':
-          updatedSettings = settings.copyWith(favoriteCategories: value);
-          break;
-        case 'autoPlayAudio':
-          updatedSettings = settings.copyWith(autoPlayAudio: value);
-          break;
-        case 'fontSize':
-          updatedSettings = settings.copyWith(fontSize: value);
-          break;
-        case 'enableHapticFeedback':
-          updatedSettings = settings.copyWith(enableHapticFeedback: value);
-          break;
-        case 'readingMode':
-          updatedSettings = settings.copyWith(readingMode: value);
-          break;
-        case 'enableBookmarks':
-          updatedSettings = settings.copyWith(enableBookmarks: value);
-          break;
-        case 'enableNotes':
-          updatedSettings = settings.copyWith(enableNotes: value);
-          break;
-        case 'enableHighlights':
-          updatedSettings = settings.copyWith(enableHighlights: value);
-          break;
-        default:
-          return;
-      }
-
-      await saveSettings(updatedSettings);
-    } catch (e) {
-      // Handle error
-    }
-  }
+  Map<String, dynamic>? get rawLich => _lichCongGiao;
 }
